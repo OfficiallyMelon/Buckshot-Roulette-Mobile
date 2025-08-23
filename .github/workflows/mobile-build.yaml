@@ -112,21 +112,34 @@ jobs:
       - name: Create .ipa (unsigned)
         run: |
           set -euxo pipefail
+
           APP_DIR="${ARCHIVE_PATH}/Products/Applications"
           if [[ ! -d "${APP_DIR}" ]]; then
             echo "Archive missing Applications dir: ${APP_DIR}"
             find "${ARCHIVE_PATH}" -maxdepth 4 -print
             exit 1
           fi
-          APP_PATH="$(ls "${APP_DIR}"/*.app | head -n1 || true)"
+
+          # Get the .app directory path itself (not its contents)
+          APP_PATH="$(/usr/bin/find "${APP_DIR}" -maxdepth 1 -type d -name "*.app" -print -quit || true)"
           if [[ -z "${APP_PATH}" ]]; then
             echo "No .app found in ${APP_DIR}"
+            ls -al "${APP_DIR}" || true
             exit 1
           fi
+          echo "Packaging app: ${APP_PATH}"
+
           rm -rf Payload
           mkdir -p Payload
           cp -R "${APP_PATH}" Payload/
-          /usr/bin/zip -qry "${IPA_NAME}" Payload
+
+          # Create the .ipa (you can use zip or ditto; ditto is more macOS-native)
+          # Option A: ditto (recommended)
+          # /usr/bin/ditto -c -k --sequesterRsrc --keepParent Payload "${IPA_NAME}"
+
+          # Option B: zip (what you had)
+          ( cd Payload && /usr/bin/zip -qry "../${IPA_NAME}" . )
+
 
       - name: Export Android APK
         run: |
