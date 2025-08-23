@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dhovaahad40xo"
+path="res://.godot/imported/bracket selection_square1.png-6dbd7d9fc42764494aee5247ab567440.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://misc/bracket selection_square1.png"
+dest_files=PackedStringArray("res://.godot/imported/bracket selection_square1.png-6dbd7d9fc42764494aee5247ab567440.ctex")
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dicr5jik7yjw3"
+path="res://.godot/imported/dealer fly away crash.ogg-22f4abf785c1c077c5b38f46e7d0b8e3.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/dealer fly away crash.ogg"
+dest_files=PackedStringArray("res://.godot/imported/dealer fly away crash.ogg-22f4abf785c1c077c5b38f46e7d0b8e3.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

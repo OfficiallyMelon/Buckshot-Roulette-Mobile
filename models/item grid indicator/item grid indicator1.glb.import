@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bxdk4euo2oqw2"
+path="res://.godot/imported/item grid indicator1.glb-6c3fc3c4e16a4e34d5e97fa6c7d36e5e.scn"
+
+[deps]
+
+source_file="res://models/item grid indicator/item grid indicator1.glb"
+dest_files=PackedStringArray("res://.godot/imported/item grid indicator1.glb-6c3fc3c4e16a4e34d5e97fa6c7d36e5e.scn")
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cc6t8wyhkcuck"
+path="res://.godot/imported/blade cut.ogg-0eddb42d90d0a7add6d6d9b81968962b.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/blade cut.ogg"
+dest_files=PackedStringArray("res://.godot/imported/blade cut.ogg-0eddb42d90d0a7add6d6d9b81968962b.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

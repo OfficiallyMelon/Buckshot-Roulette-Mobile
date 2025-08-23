@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://dshebd1afqr6b"
+path="res://.godot/imported/signature machine writer1.glb-906c64f72b19c984f26eac4d0f83bd13.scn"
+
+[deps]
+
+source_file="res://models/signature machine writer/signature machine writer1.glb"
+dest_files=PackedStringArray("res://.godot/imported/signature machine writer1.glb-906c64f72b19c984f26eac4d0f83bd13.scn")
+
+[params]
+
+dummy_value_ignore_me=0

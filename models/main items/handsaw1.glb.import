@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://qga0utoyy3fk"
+path="res://.godot/imported/handsaw1.glb-ac2e4a0cc45c2f37f0bb2dc8a4f179f5.scn"
+
+[deps]
+
+source_file="res://models/main items/handsaw1.glb"
+dest_files=PackedStringArray("res://.godot/imported/handsaw1.glb-ac2e4a0cc45c2f37f0bb2dc8a4f179f5.scn")
+
+[params]
+
+dummy_value_ignore_me=0

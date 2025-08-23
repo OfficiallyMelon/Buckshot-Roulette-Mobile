@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://byta8covwmbh7"
+path="res://.godot/imported/dealer hands_burner phone1.glb-3a88cd8baae3b7709f3164b4851275cc.scn"
+
+[deps]
+
+source_file="res://models/dealer hand burner phone/dealer hands_burner phone1.glb"
+dest_files=PackedStringArray("res://.godot/imported/dealer hands_burner phone1.glb-3a88cd8baae3b7709f3164b4851275cc.scn")
+
+[params]
+
+dummy_value_ignore_me=0

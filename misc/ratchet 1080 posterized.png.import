@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dg6q5em3kldh7"
+path="res://.godot/imported/ratchet 1080 posterized.png-580c799b3dfb5fa794526f6ba468c743.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://misc/ratchet 1080 posterized.png"
+dest_files=PackedStringArray("res://.godot/imported/ratchet 1080 posterized.png-580c799b3dfb5fa794526f6ba468c743.ctex")
+
+[params]
+
+dummy_value_ignore_me=0

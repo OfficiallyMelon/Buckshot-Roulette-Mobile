@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://dixp5ucdopfv7"
+path="res://.godot/imported/tabletop health counter export1.glb-b8c0ea304854d28348773e7fc49c4919.scn"
+
+[deps]
+
+source_file="res://models/tabletop health counter/tabletop health counter export1.glb"
+dest_files=PackedStringArray("res://.godot/imported/tabletop health counter export1.glb-b8c0ea304854d28348773e7fc49c4919.scn")
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://b542a1s2p6h3h"
+path="res://.godot/imported/you are dead.png-37fc939de8af8f5316b86f66eb866034.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://misc/you are dead.png"
+dest_files=PackedStringArray("res://.godot/imported/you are dead.png-37fc939de8af8f5316b86f66eb866034.ctex")
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://41s8p5dr4ie"
+path="res://.godot/imported/music_helicopter vol1.ogg-8780a85344376ffede3b9eab6a9b086e.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/music_helicopter vol1.ogg"
+dest_files=PackedStringArray("res://.godot/imported/music_helicopter vol1.ogg-8780a85344376ffede3b9eab6a9b086e.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cuno4ddsqn5oy"
+path="res://.godot/imported/place down medicine.ogg-e255f34b7aaf93b791dbb8d7e5194935.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/place down medicine.ogg"
+dest_files=PackedStringArray("res://.godot/imported/place down medicine.ogg-e255f34b7aaf93b791dbb8d7e5194935.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bryxkf515hxci"
+path="res://.godot/imported/button death new.ogg-e659c5598ff74460e5ab0e5794a7a274.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/button death new.ogg"
+dest_files=PackedStringArray("res://.godot/imported/button death new.ogg-e659c5598ff74460e5ab0e5794a7a274.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

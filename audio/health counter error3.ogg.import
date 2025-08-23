@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cw3mtr3l3awof"
+path="res://.godot/imported/health counter error3.ogg-330f18838b470550288352a298e2791b.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/health counter error3.ogg"
+dest_files=PackedStringArray("res://.godot/imported/health counter error3.ogg-330f18838b470550288352a298e2791b.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

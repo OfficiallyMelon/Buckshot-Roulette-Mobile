@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bfsvq3bkh82pg"
+path="res://.godot/imported/dealer death medicine1.ogg-96a2b80fac3148d660dbb3020a21424d.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/dealer death medicine1.ogg"
+dest_files=PackedStringArray("res://.godot/imported/dealer death medicine1.ogg-96a2b80fac3148d660dbb3020a21424d.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

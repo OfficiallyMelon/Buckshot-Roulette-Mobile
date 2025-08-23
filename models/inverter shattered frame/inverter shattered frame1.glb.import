@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bkdgr4vh0nwos"
+path="res://.godot/imported/inverter shattered frame1.glb-367c73e9995389c09d15c68cd3dc48d1.scn"
+
+[deps]
+
+source_file="res://models/inverter shattered frame/inverter shattered frame1.glb"
+dest_files=PackedStringArray("res://.godot/imported/inverter shattered frame1.glb-367c73e9995389c09d15c68cd3dc48d1.scn")
+
+[params]
+
+dummy_value_ignore_me=0

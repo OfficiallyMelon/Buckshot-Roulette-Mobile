@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://b5vrauvb6hjgk"
+path="res://.godot/imported/lobby area blockout3_metal sheet albedo darker.png-7d1e2dc2a1d2448f90bf5586a7023b38.ctex"
+metadata={
+"vram_texture": false
+}
+generator_parameters={}
+
+[deps]
+
+source_file="res://models/lobby area3/lobby area blockout3_metal sheet albedo darker.png"
+dest_files=["res://.godot/imported/lobby area blockout3_metal sheet albedo darker.png-7d1e2dc2a1d2448f90bf5586a7023b38.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

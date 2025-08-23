@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dkhefilflxi04"
+path="res://.godot/imported/grow barrel.ogg-4e08704e574b93b0fdf86290c33b5163.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/grow barrel.ogg"
+dest_files=PackedStringArray("res://.godot/imported/grow barrel.ogg-4e08704e574b93b0fdf86290c33b5163.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

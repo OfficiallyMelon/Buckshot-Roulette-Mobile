@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://8m6xci7r3kwl"
+path="res://.godot/imported/dealer hands_expired medicine blister pack1.glb-592b30579f6e321c86cd589a7ce1085a.scn"
+
+[deps]
+
+source_file="res://models/dealer hands medicine/dealer hands_expired medicine blister pack1.glb"
+dest_files=PackedStringArray("res://.godot/imported/dealer hands_expired medicine blister pack1.glb-592b30579f6e321c86cd589a7ce1085a.scn")
+
+[params]
+
+dummy_value_ignore_me=0

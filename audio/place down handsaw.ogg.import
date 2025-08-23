@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://doajwyhyyh757"
+path="res://.godot/imported/place down handsaw.ogg-9346b92c6824765405d832a5184da282.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/place down handsaw.ogg"
+dest_files=PackedStringArray("res://.godot/imported/place down handsaw.ogg-9346b92c6824765405d832a5184da282.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

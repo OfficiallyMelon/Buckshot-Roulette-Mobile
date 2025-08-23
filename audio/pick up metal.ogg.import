@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cx26u6antgebp"
+path="res://.godot/imported/pick up metal.ogg-6a18c61e728f6de820fd60b591a67a4f.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/pick up metal.ogg"
+dest_files=PackedStringArray("res://.godot/imported/pick up metal.ogg-6a18c61e728f6de820fd60b591a67a4f.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

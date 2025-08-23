@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://b2g76km3pml6x"
+path="res://.godot/imported/backroom blockout4_5145UYCSGoL.png-17cb7d2854f8d2cc1e0f0f514f8b115a.ctex"
+metadata={
+"vram_texture": false
+}
+generator_parameters={}
+
+[deps]
+
+source_file="res://models/backroom blockout3/backroom blockout4_5145UYCSGoL.png"
+dest_files=["res://.godot/imported/backroom blockout4_5145UYCSGoL.png-17cb7d2854f8d2cc1e0f0f514f8b115a.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

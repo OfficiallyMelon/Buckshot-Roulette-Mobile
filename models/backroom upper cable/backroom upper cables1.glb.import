@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://1i3u086rc0yf"
+path="res://.godot/imported/backroom upper cables1.glb-166f15f1e8234f34cfa3f92a586ce6b4.scn"
+
+[deps]
+
+source_file="res://models/backroom upper cable/backroom upper cables1.glb"
+dest_files=PackedStringArray("res://.godot/imported/backroom upper cables1.glb-166f15f1e8234f34cfa3f92a586ce6b4.scn")
+
+[params]
+
+dummy_value_ignore_me=0

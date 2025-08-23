@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bmfpqyheaxjq2"
+path="res://.godot/imported/monitor_fullscreen.png-7017396b3c967e0794c925ed7712d373.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://misc/monitor_fullscreen.png"
+dest_files=PackedStringArray("res://.godot/imported/monitor_fullscreen.png-7017396b3c967e0794c925ed7712d373.ctex")
+
+[params]
+
+dummy_value_ignore_me=0

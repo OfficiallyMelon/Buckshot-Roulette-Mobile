@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://c0nb33yt0irqp"
+path="res://.godot/imported/tabletop standalone export2.glb-31dad7bf13e15be224f39acb7a24da6a.scn"
+
+[deps]
+
+source_file="res://models/tabletop standalone2/tabletop standalone export2.glb"
+dest_files=PackedStringArray("res://.godot/imported/tabletop standalone export2.glb-31dad7bf13e15be224f39acb7a24da6a.scn")
+
+[params]
+
+dummy_value_ignore_me=0

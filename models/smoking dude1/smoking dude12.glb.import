@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cqvab61i14cer"
+path="res://.godot/imported/smoking dude12.glb-86f979513c98eb06f028ef853ebbb15a.scn"
+
+[deps]
+
+source_file="res://models/smoking dude1/smoking dude12.glb"
+dest_files=PackedStringArray("res://.godot/imported/smoking dude12.glb-86f979513c98eb06f028ef853ebbb15a.scn")
+
+[params]
+
+dummy_value_ignore_me=0

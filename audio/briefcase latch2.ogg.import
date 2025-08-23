@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cwcidaf60oux4"
+path="res://.godot/imported/briefcase latch2.ogg-cb3c21466adafad7b65f805978e824ee.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/briefcase latch2.ogg"
+dest_files=PackedStringArray("res://.godot/imported/briefcase latch2.ogg-cb3c21466adafad7b65f805978e824ee.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

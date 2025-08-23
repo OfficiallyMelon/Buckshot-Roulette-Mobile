@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://du7dfv063vlp"
+path="res://.godot/imported/god.ogg-d067a857b0a9db7d593f7bbac5552f5b.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/god.ogg"
+dest_files=PackedStringArray("res://.godot/imported/god.ogg-d067a857b0a9db7d593f7bbac5552f5b.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cs2smbcm5uhva"
+path="res://.godot/imported/dealer use magnifier.ogg-08d07d53ce72e9cddd874b0b4bb4cfa1.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/dealer use magnifier.ogg"
+dest_files=PackedStringArray("res://.godot/imported/dealer use magnifier.ogg-08d07d53ce72e9cddd874b0b4bb4cfa1.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

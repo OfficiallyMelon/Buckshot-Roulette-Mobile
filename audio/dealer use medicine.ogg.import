@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://clio68icpoyqr"
+path="res://.godot/imported/dealer use medicine.ogg-76ce61595c4e6f722d6df3606dae0983.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/dealer use medicine.ogg"
+dest_files=PackedStringArray("res://.godot/imported/dealer use medicine.ogg-76ce61595c4e6f722d6df3606dae0983.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

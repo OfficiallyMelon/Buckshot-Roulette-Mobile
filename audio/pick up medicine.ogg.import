@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://oxkl88kd3nr6"
+path="res://.godot/imported/pick up medicine.ogg-fc2841ab866e4a85de3cff583ef5426a.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/pick up medicine.ogg"
+dest_files=PackedStringArray("res://.godot/imported/pick up medicine.ogg-fc2841ab866e4a85de3cff583ef5426a.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

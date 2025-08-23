@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cgwvno7bkfyl"
+path="res://.godot/imported/rack shotgun.ogg-5e894cd00e9633d4fa79899c06ea98f5.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/rack shotgun.ogg"
+dest_files=PackedStringArray("res://.godot/imported/rack shotgun.ogg-5e894cd00e9633d4fa79899c06ea98f5.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

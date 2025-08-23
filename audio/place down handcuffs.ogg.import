@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bl835gemn2qp2"
+path="res://.godot/imported/place down handcuffs.ogg-5e08bf675227b5367e4d8c50a210cb4d.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/place down handcuffs.ogg"
+dest_files=PackedStringArray("res://.godot/imported/place down handcuffs.ogg-5e08bf675227b5367e4d8c50a210cb4d.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

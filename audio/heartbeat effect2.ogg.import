@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cgx8jk8x7nr5a"
+path="res://.godot/imported/heartbeat effect2.ogg-29b6488b0d92ba23b618ed8fa92c1160.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/heartbeat effect2.ogg"
+dest_files=PackedStringArray("res://.godot/imported/heartbeat effect2.ogg-29b6488b0d92ba23b618ed8fa92c1160.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

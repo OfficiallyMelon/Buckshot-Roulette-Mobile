@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://l0c5vypnkikg"
+path="res://.godot/imported/place down inverter.ogg-f0d8fc65b7c8ef2c193acae17da52f67.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/place down inverter.ogg"
+dest_files=PackedStringArray("res://.godot/imported/place down inverter.ogg-f0d8fc65b7c8ef2c193acae17da52f67.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,16 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://uydyax7ok1fu"
+path="res://.godot/imported/temp gunshot_blank.wav-96b8fac8691489907d5a150fd1230d3f.sample"
+
+[deps]
+
+source_file="res://audio/temp gunshot_blank.wav"
+dest_files=PackedStringArray("res://.godot/imported/temp gunshot_blank.wav-96b8fac8691489907d5a150fd1230d3f.sample")
+
+[params]
+
+dummy_value_ignore_me=0
+compress/mode=0

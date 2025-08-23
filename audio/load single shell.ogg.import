@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bir8m74huhuh7"
+path="res://.godot/imported/load single shell.ogg-b783c8f425fa7d927af81f34a7787f24.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/load single shell.ogg"
+dest_files=PackedStringArray("res://.godot/imported/load single shell.ogg-b783c8f425fa7d927af81f34a7787f24.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

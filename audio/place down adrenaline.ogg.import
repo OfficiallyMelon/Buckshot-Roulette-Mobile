@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cc2s0rltryyjk"
+path="res://.godot/imported/place down adrenaline.ogg-abeb2886d2e2fa2acac015db06ebdbe9.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/place down adrenaline.ogg"
+dest_files=PackedStringArray("res://.godot/imported/place down adrenaline.ogg-abeb2886d2e2fa2acac015db06ebdbe9.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

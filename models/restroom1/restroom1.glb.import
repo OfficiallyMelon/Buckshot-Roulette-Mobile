@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cqc7ppaw6oh41"
+path="res://.godot/imported/restroom1.glb-c67e268094a0d1d76de044aa3c099ede.scn"
+
+[deps]
+
+source_file="res://models/restroom1/restroom1.glb"
+dest_files=PackedStringArray("res://.godot/imported/restroom1.glb-c67e268094a0d1d76de044aa3c099ede.scn")
+
+[params]
+
+dummy_value_ignore_me=0

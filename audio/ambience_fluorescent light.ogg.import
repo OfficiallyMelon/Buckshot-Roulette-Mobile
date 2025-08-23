@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c06iq4n6xqwuu"
+path="res://.godot/imported/ambience_fluorescent light.ogg-ed7fbf3cf769ad8e53efe5f76a1f3d74.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/ambience_fluorescent light.ogg"
+dest_files=PackedStringArray("res://.godot/imported/ambience_fluorescent light.ogg-ed7fbf3cf769ad8e53efe5f76a1f3d74.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dw1sjbgkgwqx6"
+path="res://.godot/imported/yuletide machine logo1.png-f5215cf891bd877f4ba6849c3e337712.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://main player/yuletide machine logo1.png"
+dest_files=PackedStringArray("res://.godot/imported/yuletide machine logo1.png-f5215cf891bd877f4ba6849c3e337712.ctex")
+
+[params]
+
+dummy_value_ignore_me=0

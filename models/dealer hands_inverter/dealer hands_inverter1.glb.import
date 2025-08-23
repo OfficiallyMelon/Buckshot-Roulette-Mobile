@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://b3g6rc1x3cm2o"
+path="res://.godot/imported/dealer hands_inverter1.glb-15e6a85546f5891fdb2fb14c79370a98.scn"
+
+[deps]
+
+source_file="res://models/dealer hands_inverter/dealer hands_inverter1.glb"
+dest_files=PackedStringArray("res://.godot/imported/dealer hands_inverter1.glb-15e6a85546f5891fdb2fb14c79370a98.scn")
+
+[params]
+
+dummy_value_ignore_me=0

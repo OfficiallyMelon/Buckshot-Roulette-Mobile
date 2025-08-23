@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bg6ek21cqqtcw"
+path="res://.godot/imported/player vehicle1_car interior main.png-67b0037d49e4d3dd7b3b86dc5c7de1f5.ctex"
+metadata={
+"vram_texture": false
+}
+generator_parameters={}
+
+[deps]
+
+source_file="res://models/player vehicle/player vehicle1_car interior main.png"
+dest_files=["res://.godot/imported/player vehicle1_car interior main.png-67b0037d49e4d3dd7b3b86dc5c7de1f5.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

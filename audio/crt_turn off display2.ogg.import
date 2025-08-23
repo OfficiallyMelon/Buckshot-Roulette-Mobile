@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://du4qvutoy234w"
+path="res://.godot/imported/crt_turn off display2.ogg-65cd7e6b7d52ac990718cd0ecab8bcb8.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/crt_turn off display2.ogg"
+dest_files=PackedStringArray("res://.godot/imported/crt_turn off display2.ogg-65cd7e6b7d52ac990718cd0ecab8bcb8.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://ci5pgcseos22y"
+path="res://.godot/imported/ibm key1.glb-5229b9da417208abbd3446edcd85e11c.scn"
+
+[deps]
+
+source_file="res://models/ibm key/ibm key1.glb"
+dest_files=PackedStringArray("res://.godot/imported/ibm key1.glb-5229b9da417208abbd3446edcd85e11c.scn")
+
+[params]
+
+dummy_value_ignore_me=0

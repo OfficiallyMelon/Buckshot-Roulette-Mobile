@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://c3gnijqfyfdcm"
+path="res://.godot/imported/bracket selection menu_windowed mode2.png-e4ed4cd461a0e4fec72cb03a1fd9a727.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://misc/bracket selection menu_windowed mode2.png"
+dest_files=PackedStringArray("res://.godot/imported/bracket selection menu_windowed mode2.png-e4ed4cd461a0e4fec72cb03a1fd9a727.ctex")
+
+[params]
+
+dummy_value_ignore_me=0

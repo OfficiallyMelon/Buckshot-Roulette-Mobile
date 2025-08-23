@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://dhg3iqsupl4xp"
+path="res://.godot/imported/release form patched1.glb-5a9808b2d6dd136e0538307613ce84ea.scn"
+
+[deps]
+
+source_file="res://models/release form patched/release form patched1.glb"
+dest_files=PackedStringArray("res://.godot/imported/release form patched1.glb-5a9808b2d6dd136e0538307613ce84ea.scn")
+
+[params]
+
+dummy_value_ignore_me=0

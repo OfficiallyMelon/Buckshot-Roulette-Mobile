@@ -1,0 +1,15 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://cjt600vs5hbut"
+path="res://.godot/imported/DOTMATRI.TTF-199287babf245a92bc2ef85bd599a155.fontdata"
+
+[deps]
+
+source_file="res://fonts/DOTMATRI.TTF"
+dest_files=PackedStringArray("res://.godot/imported/DOTMATRI.TTF-199287babf245a92bc2ef85bd599a155.fontdata")
+
+[params]
+
+dummy_value_ignore_me=0

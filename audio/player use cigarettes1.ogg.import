@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dpw8upjcl0tto"
+path="res://.godot/imported/player use cigarettes1.ogg-b3265b8d5b02537670b99ac23ffffc9b.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/player use cigarettes1.ogg"
+dest_files=PackedStringArray("res://.godot/imported/player use cigarettes1.ogg-b3265b8d5b02537670b99ac23ffffc9b.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://k3dc08cyekrq"
+path="res://.godot/imported/shell waterfall2.glb-0bebf283d4ffce654180a92ab48c841e.scn"
+
+[deps]
+
+source_file="res://models/shell waterfall/shell waterfall2.glb"
+dest_files=PackedStringArray("res://.godot/imported/shell waterfall2.glb-0bebf283d4ffce654180a92ab48c841e.scn")
+
+[params]
+
+dummy_value_ignore_me=0

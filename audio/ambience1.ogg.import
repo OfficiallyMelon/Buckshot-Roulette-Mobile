@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://p26iac6spb1j"
+path="res://.godot/imported/ambience1.ogg-4996594357d7e8b0bc8b0410d49ee2dd.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/ambience1.ogg"
+dest_files=PackedStringArray("res://.godot/imported/ambience1.ogg-4996594357d7e8b0bc8b0410d49ee2dd.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

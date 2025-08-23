@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bujid58om21vl"
+path="res://.godot/imported/dealer hands_expired medicine1.glb-4790c13de1a2c77cc408460815ee8b50.scn"
+
+[deps]
+
+source_file="res://models/dealer hands medicine/dealer hands_expired medicine1.glb"
+dest_files=PackedStringArray("res://.godot/imported/dealer hands_expired medicine1.glb-4790c13de1a2c77cc408460815ee8b50.scn")
+
+[params]
+
+dummy_value_ignore_me=0

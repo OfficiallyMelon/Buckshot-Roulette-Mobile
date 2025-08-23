@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cv2lox7hmlv2i"
+path="res://.godot/imported/health counter main1.glb-3842ab1f0386692703fe777cc8171b24.scn"
+
+[deps]
+
+source_file="res://models/health counter main/health counter main1.glb"
+dest_files=PackedStringArray("res://.godot/imported/health counter main1.glb-3842ab1f0386692703fe777cc8171b24.scn")
+
+[params]
+
+dummy_value_ignore_me=0

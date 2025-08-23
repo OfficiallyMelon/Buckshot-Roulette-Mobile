@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cutsnqrik6cax"
+path="res://.godot/imported/tabletop briefcase1.glb-92fcb3eba3004d2e1a0b8b7b9a9b6b79.scn"
+
+[deps]
+
+source_file="res://models/tabletop briefcase/tabletop briefcase1.glb"
+dest_files=PackedStringArray("res://.godot/imported/tabletop briefcase1.glb-92fcb3eba3004d2e1a0b8b7b9a9b6b79.scn")
+
+[params]
+
+dummy_value_ignore_me=0

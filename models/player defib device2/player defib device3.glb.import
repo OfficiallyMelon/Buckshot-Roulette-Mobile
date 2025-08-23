@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bx5qffgh6fi26"
+path="res://.godot/imported/player defib device3.glb-2286dc42c82519adca0ee7d269d0470b.scn"
+
+[deps]
+
+source_file="res://models/player defib device2/player defib device3.glb"
+dest_files=PackedStringArray("res://.godot/imported/player defib device3.glb-2286dc42c82519adca0ee7d269d0470b.scn")
+
+[params]
+
+dummy_value_ignore_me=0

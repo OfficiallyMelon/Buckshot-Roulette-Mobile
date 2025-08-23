@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bkotgjreqjbfe"
+path="res://.godot/imported/shelldrop3.ogg-1caebfb835e9b47ad5dc52ff0dbe640e.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/shelldrop3.ogg"
+dest_files=PackedStringArray("res://.godot/imported/shelldrop3.ogg-1caebfb835e9b47ad5dc52ff0dbe640e.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

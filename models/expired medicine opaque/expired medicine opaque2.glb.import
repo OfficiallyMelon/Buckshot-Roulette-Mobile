@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://868c0jnjcyrc"
+path="res://.godot/imported/expired medicine opaque2.glb-1d4bc7a90cd7c0e80954a00129a2ce79.scn"
+
+[deps]
+
+source_file="res://models/expired medicine opaque/expired medicine opaque2.glb"
+dest_files=PackedStringArray("res://.godot/imported/expired medicine opaque2.glb-1d4bc7a90cd7c0e80954a00129a2ce79.scn")
+
+[params]
+
+dummy_value_ignore_me=0

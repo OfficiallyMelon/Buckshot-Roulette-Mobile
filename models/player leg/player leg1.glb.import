@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://b4dau5s54sq2l"
+path="res://.godot/imported/player leg1.glb-84ffd83bea227e33c7d3588ee4ea9205.scn"
+
+[deps]
+
+source_file="res://models/player leg/player leg1.glb"
+dest_files=PackedStringArray("res://.godot/imported/player leg1.glb-84ffd83bea227e33c7d3588ee4ea9205.scn")
+
+[params]
+
+dummy_value_ignore_me=0

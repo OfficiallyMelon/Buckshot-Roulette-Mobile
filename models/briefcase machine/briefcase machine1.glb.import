@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bd5ad8qku1ytd"
+path="res://.godot/imported/briefcase machine1.glb-6238435ea49829be00b72b1b47929b73.scn"
+
+[deps]
+
+source_file="res://models/briefcase machine/briefcase machine1.glb"
+dest_files=PackedStringArray("res://.godot/imported/briefcase machine1.glb-6238435ea49829be00b72b1b47929b73.scn")
+
+[params]
+
+dummy_value_ignore_me=0

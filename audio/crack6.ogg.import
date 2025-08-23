@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cojts68e4w7a7"
+path="res://.godot/imported/crack6.ogg-5b4f10b5fb9ef09d0ab51ac137f3dca9.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/crack6.ogg"
+dest_files=PackedStringArray("res://.godot/imported/crack6.ogg-5b4f10b5fb9ef09d0ab51ac137f3dca9.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

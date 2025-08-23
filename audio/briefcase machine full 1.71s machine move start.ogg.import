@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cj10ws6tb3jqj"
+path="res://.godot/imported/briefcase machine full 1.71s machine move start.ogg-9a2643f076ef815cb3bb8cd00231c60f.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/briefcase machine full 1.71s machine move start.ogg"
+dest_files=PackedStringArray("res://.godot/imported/briefcase machine full 1.71s machine move start.ogg-9a2643f076ef815cb3bb8cd00231c60f.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

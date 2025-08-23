@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://clf1gdi5kwgfh"
+path="res://.godot/imported/defib motor.ogg-bc3d06943bf9c484a3910455d929e92d.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/defib motor.ogg"
+dest_files=PackedStringArray("res://.godot/imported/defib motor.ogg-bc3d06943bf9c484a3910455d929e92d.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ck8nljwbtpqgw"
+path="res://.godot/imported/place down burner phone.ogg-63f3bebcafac6c246a0e09c19d7c15cd.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/place down burner phone.ogg"
+dest_files=PackedStringArray("res://.godot/imported/place down burner phone.ogg-63f3bebcafac6c246a0e09c19d7c15cd.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

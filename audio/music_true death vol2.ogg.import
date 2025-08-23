@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://8r3tpv3kpb45"
+path="res://.godot/imported/music_true death vol2.ogg-3ec9d701b651260a7a927fcdaedb885c.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/music_true death vol2.ogg"
+dest_files=PackedStringArray("res://.godot/imported/music_true death vol2.ogg-3ec9d701b651260a7a927fcdaedb885c.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

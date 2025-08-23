@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://jy645oarlh6d"
+path="res://.godot/imported/playtest win screen.png-98a9d949c9447644823dabfef902a19c.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://misc/playtest win screen.png"
+dest_files=PackedStringArray("res://.godot/imported/playtest win screen.png-98a9d949c9447644823dabfef902a19c.ctex")
+
+[params]
+
+dummy_value_ignore_me=0

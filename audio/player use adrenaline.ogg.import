@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cm3u3arp7cgp3"
+path="res://.godot/imported/player use adrenaline.ogg-6a00151ccdb4bb2d7fad744635975e4d.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/player use adrenaline.ogg"
+dest_files=PackedStringArray("res://.godot/imported/player use adrenaline.ogg-6a00151ccdb4bb2d7fad744635975e4d.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

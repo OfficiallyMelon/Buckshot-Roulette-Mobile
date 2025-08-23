@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bu8b7lstbnot"
+path="res://.godot/imported/car drive ambience.ogg-3faaff5f538e7d129a41d45f8d01a771.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/car drive ambience.ogg"
+dest_files=PackedStringArray("res://.godot/imported/car drive ambience.ogg-3faaff5f538e7d129a41d45f8d01a771.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

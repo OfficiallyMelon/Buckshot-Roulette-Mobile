@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://oyltwjety7uu"
+path="res://.godot/imported/health counter confirmation.ogg-40091db2813baf3aae1fd28bf3d40912.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/health counter confirmation.ogg"
+dest_files=PackedStringArray("res://.godot/imported/health counter confirmation.ogg-40091db2813baf3aae1fd28bf3d40912.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://er6vhl02kpgn"
+path="res://.godot/imported/crt icon_global overview2.png-9fe77ec4fffc922872cc99d19f67e97b.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://misc/crt icon_global overview2.png"
+dest_files=PackedStringArray("res://.godot/imported/crt icon_global overview2.png-9fe77ec4fffc922872cc99d19f67e97b.ctex")
+
+[params]
+
+dummy_value_ignore_me=0

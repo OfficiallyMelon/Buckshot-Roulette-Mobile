@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b23j4bdh6qvek"
+path="res://.godot/imported/pick up adrenaline.ogg-3f970d14095e838d69be3b22f3518e15.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/pick up adrenaline.ogg"
+dest_files=PackedStringArray("res://.godot/imported/pick up adrenaline.ogg-3f970d14095e838d69be3b22f3518e15.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

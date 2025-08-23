@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://b330w3eu6kvn"
+path="res://.godot/imported/makeship plushie1.glb-c9cf76e451f9a6fbb02e4d065ae37155.scn"
+
+[deps]
+
+source_file="res://models/makeship plushie/makeship plushie1.glb"
+dest_files=PackedStringArray("res://.godot/imported/makeship plushie1.glb-c9cf76e451f9a6fbb02e4d065ae37155.scn")
+
+[params]
+
+dummy_value_ignore_me=0

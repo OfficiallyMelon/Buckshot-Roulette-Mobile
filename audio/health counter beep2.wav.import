@@ -1,0 +1,16 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://syxcd56vtgjw"
+path="res://.godot/imported/health counter beep2.wav-5241d040ca7e72f2847a29f2d2060d27.sample"
+
+[deps]
+
+source_file="res://audio/health counter beep2.wav"
+dest_files=PackedStringArray("res://.godot/imported/health counter beep2.wav-5241d040ca7e72f2847a29f2d2060d27.sample")
+
+[params]
+
+dummy_value_ignore_me=0
+compress/mode=0

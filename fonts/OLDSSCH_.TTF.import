@@ -1,0 +1,15 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://75y1m8ogs0k8"
+path="res://.godot/imported/OLDSSCH_.TTF-c57f27601627648dd8855239f4a13da1.fontdata"
+
+[deps]
+
+source_file="res://fonts/OLDSSCH_.TTF"
+dest_files=PackedStringArray("res://.godot/imported/OLDSSCH_.TTF-c57f27601627648dd8855239f4a13da1.fontdata")
+
+[params]
+
+dummy_value_ignore_me=0

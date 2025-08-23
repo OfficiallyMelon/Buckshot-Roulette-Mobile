@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://b0bolvhj4ut6a"
+path="res://.godot/imported/muzzle flash test1.glb-3bdfecaf8eb2553bf63d2156c7d02c56.scn"
+
+[deps]
+
+source_file="res://models/muzzle flash1/muzzle flash test1.glb"
+dest_files=PackedStringArray("res://.godot/imported/muzzle flash test1.glb-3bdfecaf8eb2553bf63d2156c7d02c56.scn")
+
+[params]
+
+dummy_value_ignore_me=0

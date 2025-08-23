@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://in8w2y53gb03"
+path="res://.godot/imported/shotgun shells export1.glb-bb4d9e273d5997991b1111b69c36a640.scn"
+
+[deps]
+
+source_file="res://models/shotgun shells/shotgun shells export1.glb"
+dest_files=PackedStringArray("res://.godot/imported/shotgun shells export1.glb-bb4d9e273d5997991b1111b69c36a640.scn")
+
+[params]
+
+dummy_value_ignore_me=0

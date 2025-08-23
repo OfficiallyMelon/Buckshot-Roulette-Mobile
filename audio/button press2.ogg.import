@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cl01nn5enlt3f"
+path="res://.godot/imported/button press2.ogg-1fe49392a15d1462f7aa4b55e4ac3824.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/button press2.ogg"
+dest_files=PackedStringArray("res://.godot/imported/button press2.ogg-1fe49392a15d1462f7aa4b55e4ac3824.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

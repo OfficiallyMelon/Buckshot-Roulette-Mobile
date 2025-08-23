@@ -1,0 +1,15 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://dyyt1y31vw3o6"
+path="res://.godot/imported/steelfish rg.otf-a23826553f6f970013142b7794e4df00.fontdata"
+
+[deps]
+
+source_file="res://fonts/steelfish rg.otf"
+dest_files=PackedStringArray("res://.godot/imported/steelfish rg.otf-a23826553f6f970013142b7794e4df00.fontdata")
+
+[params]
+
+dummy_value_ignore_me=0

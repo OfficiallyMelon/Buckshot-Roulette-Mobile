@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ocjhmmw11egg"
+path="res://.godot/imported/crt_volta melody hide.ogg-55997cbae6fe1d519b866de07b04c4ef.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/crt_volta melody hide.ogg"
+dest_files=PackedStringArray("res://.godot/imported/crt_volta melody hide.ogg-55997cbae6fe1d519b866de07b04c4ef.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

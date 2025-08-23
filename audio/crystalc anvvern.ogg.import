@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cephwqmtjm1fu"
+path="res://.godot/imported/crystalc anvvern.ogg-e661107ee3a9d64720fb6d25432fe0a8.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/crystalc anvvern.ogg"
+dest_files=PackedStringArray("res://.godot/imported/crystalc anvvern.ogg-e661107ee3a9d64720fb6d25432fe0a8.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

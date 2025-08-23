@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bgp77b6bbmog6"
+path="res://.godot/imported/player vehicle1.glb-412c786a3b6530673931488aa171caa0.scn"
+
+[deps]
+
+source_file="res://models/player vehicle/player vehicle1.glb"
+dest_files=PackedStringArray("res://.godot/imported/player vehicle1.glb-412c786a3b6530673931488aa171caa0.scn")
+
+[params]
+
+dummy_value_ignore_me=0

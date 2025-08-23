@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ckxchghwk6m4m"
+path="res://.godot/imported/round indicator hum.ogg-9c258b33ca8a021f843c02507290f311.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/round indicator hum.ogg"
+dest_files=PackedStringArray("res://.godot/imported/round indicator hum.ogg-9c258b33ca8a021f843c02507290f311.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

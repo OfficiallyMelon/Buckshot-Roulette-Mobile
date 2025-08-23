@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cqwsml62wdgln"
+path="res://.godot/imported/crt icon_player stats inactive2.png-5d6b3fa022a47f9f11412a4d71d54b70.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://misc/crt icon_player stats inactive2.png"
+dest_files=PackedStringArray("res://.godot/imported/crt icon_player stats inactive2.png-5d6b3fa022a47f9f11412a4d71d54b70.ctex")
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dqma20lduypdn"
+path="res://.godot/imported/CR White splash.png-59364d4963e6be99e1dea6fb1866ad58.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://misc/CR White splash.png"
+dest_files=PackedStringArray("res://.godot/imported/CR White splash.png-59364d4963e6be99e1dea6fb1866ad58.ctex")
+
+[params]
+
+dummy_value_ignore_me=0

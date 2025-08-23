@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dvggwk7aie8v"
+path="res://.godot/imported/button_hover.ogg-2b9923237eb601795538e26bc97badaa.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/button_hover.ogg"
+dest_files=PackedStringArray("res://.godot/imported/button_hover.ogg-2b9923237eb601795538e26bc97badaa.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

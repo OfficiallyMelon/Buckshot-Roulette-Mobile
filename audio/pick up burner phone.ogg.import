@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cerv4vk2vn172"
+path="res://.godot/imported/pick up burner phone.ogg-438da456106c50246dc3fefed2d63115.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/pick up burner phone.ogg"
+dest_files=PackedStringArray("res://.godot/imported/pick up burner phone.ogg-438da456106c50246dc3fefed2d63115.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

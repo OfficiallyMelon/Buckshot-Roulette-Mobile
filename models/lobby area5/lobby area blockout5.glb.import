@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://xumwnji2ggr0"
+path="res://.godot/imported/lobby area blockout5.glb-0e5f366c0229c6296292d70cf3ad5479.scn"
+
+[deps]
+
+source_file="res://models/lobby area5/lobby area blockout5.glb"
+dest_files=PackedStringArray("res://.godot/imported/lobby area blockout5.glb-0e5f366c0229c6296292d70cf3ad5479.scn")
+
+[params]
+
+dummy_value_ignore_me=0

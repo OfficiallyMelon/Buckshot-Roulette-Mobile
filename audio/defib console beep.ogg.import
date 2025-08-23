@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://u4vqa8pdgrak"
+path="res://.godot/imported/defib console beep.ogg-00b7eb9e6c4af73701b13eb8f06b38bb.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/defib console beep.ogg"
+dest_files=PackedStringArray("res://.godot/imported/defib console beep.ogg-00b7eb9e6c4af73701b13eb8f06b38bb.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

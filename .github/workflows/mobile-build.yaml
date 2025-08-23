@@ -1,0 +1,99 @@
+name: Build Godot (iOS + Android)
+
+on:
+  push:
+    branches: ["**"]
+  workflow_dispatch:
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: macos-14
+    env:
+      GODOT_VERSION: "4.2.2"
+      EXPORT_PRESET_IOS: "iOS"
+      EXPORT_PRESET_ANDROID: "Android"
+      EXPORT_DIR_IOS: "build/ios"
+      EXPORT_DIR_ANDROID: "build/android"
+      ARCHIVE_PATH: "build/App.xcarchive"
+      IPA_NAME: "Buckshot-${{ github.sha }}.ipa"
+      APK_NAME: "Buckshot-${{ github.sha }}.apk"
+      DEPLOYMENT_TARGET: "12.0"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Godot (headless) and templates
+        run: |
+          set -euxo pipefail
+          mkdir -p tools/godot
+          cd tools/godot
+          curl -L -o godot.zip "https://downloads.tuxfamily.org/godotengine/${GODOT_VERSION}/Godot_v${GODOT_VERSION}-stable_macos.universal.zip"
+          unzip -q godot.zip
+          mv Godot.app/Contents/MacOS/Godot Godot
+          chmod +x Godot
+          cd -
+          TEMPLATES_DIR="$HOME/Library/Application Support/Godot/export_templates/${GODOT_VERSION}.stable"
+          mkdir -p "${TEMPLATES_DIR}"
+          curl -L -o templates.tpz "https://downloads.tuxfamily.org/godotengine/${GODOT_VERSION}/Godot_v${GODOT_VERSION}-stable_export_templates.tpz"
+          unzip -q templates.tpz -d templates_unpacked
+          cp -R templates_unpacked/templates/* "${TEMPLATES_DIR}/"
+
+      - name: Export iOS Xcode project
+        run: |
+          set -euxo pipefail
+          mkdir -p "${EXPORT_DIR_IOS}"
+          tools/godot/Godot --headless --path . --export-release "${EXPORT_PRESET_IOS}" "${EXPORT_DIR_IOS}"
+
+      - name: Set iOS deployment target
+        run: |
+          set -euxo pipefail
+          PROJ=$(ls "${EXPORT_DIR_IOS}"/*.xcodeproj | head -n1)
+          PBX="${PROJ}/project.pbxproj"
+          perl -0777 -pe "s/IPHONEOS_DEPLOYMENT_TARGET = [0-9.]+;/IPHONEOS_DEPLOYMENT_TARGET = ${DEPLOYMENT_TARGET};/g" -i "${PBX}"
+
+      - name: Build .xcarchive (unsigned)
+        run: |
+          set -euxo pipefail
+          PROJ=$(ls "${EXPORT_DIR_IOS}"/*.xcodeproj | head -n1)
+          SCHEME=$(/usr/libexec/PlistBuddy -c "Print :objects" "${PROJ}/project.pbxproj" \
+            | sed -n '/isa = PBXNativeTarget/,/}/p' | sed -n 's/.*name = \(.*\);.*/\1/p' | head -n1)
+          xcodebuild \
+            -project "${PROJ}" \
+            -scheme "${SCHEME}" \
+            -configuration Release \
+            -archivePath "${ARCHIVE_PATH}" \
+            -destination 'generic/platform=iOS' \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            clean archive | xcpretty || true
+          test -d "${ARCHIVE_PATH}"
+
+      - name: Create .ipa
+        run: |
+          set -euxo pipefail
+          APP_DIR="${ARCHIVE_PATH}/Products/Applications"
+          APP_PATH="$(ls "${APP_DIR}"/*.app | head -n1 || true)"
+          rm -rf Payload && mkdir Payload
+          cp -R "${APP_PATH}" Payload/
+          /usr/bin/zip -qry "${IPA_NAME}" Payload
+
+      - name: Export Android APK
+        run: |
+          set -euxo pipefail
+          mkdir -p "${EXPORT_DIR_ANDROID}"
+          tools/godot/Godot --headless --path . --export-release "${EXPORT_PRESET_ANDROID}" "${APK_NAME}"
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: builds-${{ github.sha }}
+          path: |
+            ${{ env.IPA_NAME }}
+            ${{ env.APK_NAME }}
+          if-no-files-found: error
+          retention-days: 14

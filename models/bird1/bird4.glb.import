@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://b4tkifig58mt8"
+path="res://.godot/imported/bird4.glb-e4e777cdb427b8ac6f06685b9c1fc895.scn"
+
+[deps]
+
+source_file="res://models/bird1/bird4.glb"
+dest_files=PackedStringArray("res://.godot/imported/bird4.glb-e4e777cdb427b8ac6f06685b9c1fc895.scn")
+
+[params]
+
+dummy_value_ignore_me=0

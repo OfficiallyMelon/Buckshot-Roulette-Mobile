@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bi1yp00ddiplt"
+path="res://.godot/imported/playtest death screen.png-ec177d8e92c9d27dcf120796988872f1.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://misc/playtest death screen.png"
+dest_files=PackedStringArray("res://.godot/imported/playtest death screen.png-ec177d8e92c9d27dcf120796988872f1.ctex")
+
+[params]
+
+dummy_value_ignore_me=0

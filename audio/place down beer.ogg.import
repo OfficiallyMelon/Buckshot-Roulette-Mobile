@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c0k1qaaod1e1t"
+path="res://.godot/imported/place down beer.ogg-d0b003260e3b40cb0b0adb1f97145b04.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/place down beer.ogg"
+dest_files=PackedStringArray("res://.godot/imported/place down beer.ogg-d0b003260e3b40cb0b0adb1f97145b04.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

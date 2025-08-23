@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bohbcspwrg70w"
+path="res://.godot/imported/dealer use cigarettes.ogg-dfb3e817206d29741fc21fb73518fae5.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/dealer use cigarettes.ogg"
+dest_files=PackedStringArray("res://.godot/imported/dealer use cigarettes.ogg-dfb3e817206d29741fc21fb73518fae5.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

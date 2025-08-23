@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ctgna2m1wuamg"
+path="res://.godot/imported/crack3.ogg-ecd5c1c944a1798fb3dedcc150cf394a.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/crack3.ogg"
+dest_files=PackedStringArray("res://.godot/imported/crack3.ogg-ecd5c1c944a1798fb3dedcc150cf394a.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

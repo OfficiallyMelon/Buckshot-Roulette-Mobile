@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://c3uijs8os1qtn"
+path="res://.godot/imported/CR White 1024.png-464d67cd2973178bb38167b0022d007e.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://misc/CR White 1024.png"
+dest_files=PackedStringArray("res://.godot/imported/CR White 1024.png-464d67cd2973178bb38167b0022d007e.ctex")
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ceiuroqpu577q"
+path="res://.godot/imported/player break handcuffs.ogg-b8ae3891baf9aad7b8308790999fc43e.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/player break handcuffs.ogg"
+dest_files=PackedStringArray("res://.godot/imported/player break handcuffs.ogg-b8ae3891baf9aad7b8308790999fc43e.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

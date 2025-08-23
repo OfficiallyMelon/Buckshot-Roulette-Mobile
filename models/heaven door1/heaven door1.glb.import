@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bwm83qrnd3ut"
+path="res://.godot/imported/heaven door1.glb-6ad2a06b1a5654c7949999dce9d1c917.scn"
+
+[deps]
+
+source_file="res://models/heaven door1/heaven door1.glb"
+dest_files=PackedStringArray("res://.godot/imported/heaven door1.glb-6ad2a06b1a5654c7949999dce9d1c917.scn")
+
+[params]
+
+dummy_value_ignore_me=0

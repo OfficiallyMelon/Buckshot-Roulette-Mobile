@@ -1,0 +1,443 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Buckshot Roulette"
+run/main_scene="res://scenes/menu.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/image="res://misc/CR White splash.png"
+config/icon="res://misc/icon1.png"
+boot_splash/minimum_display_time=3000
+
+[autoload]
+
+GlobalSteam="*res://scripts/Steam.gd"
+GlobalVariables="*res://scripts/GlobalVariables.gd"
+
+[debug]
+
+file_logging/enable_file_logging=true
+
+[display]
+
+window/size/viewport_width=960
+window/size/viewport_height=540
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+window/handheld/orientation=6
+mouse_cursor/custom_image="res://misc/cursor xp_point.png"
+mouse_cursor/custom_image_hotspot=Vector2(9, 0)
+
+[input]
+
+ui_accept={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194309,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
+]
+}
+ui_select={
+"deadzone": 0.5,
+"events": []
+}
+ui_cancel={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194308,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":1,"pressure":0.0,"pressed":false,"script":null)
+]
+}
+ui_focus_next={
+"deadzone": 0.5,
+"events": []
+}
+ui_focus_prev={
+"deadzone": 0.5,
+"events": []
+}
+ui_left={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194319,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":13,"pressure":0.0,"pressed":false,"script":null)
+]
+}
+ui_right={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194321,"physical_keycode":4194321,"key_label":4194321,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":14,"pressure":0.0,"pressed":false,"script":null)
+]
+}
+ui_up={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194320,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":11,"pressure":0.0,"pressed":false,"script":null)
+]
+}
+ui_down={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194322,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":12,"pressure":0.0,"pressed":false,"script":null)
+]
+}
+ui_page_up={
+"deadzone": 0.5,
+"events": []
+}
+ui_page_down={
+"deadzone": 0.5,
+"events": []
+}
+ui_home={
+"deadzone": 0.5,
+"events": []
+}
+ui_end={
+"deadzone": 0.5,
+"events": []
+}
+ui_cut={
+"deadzone": 0.5,
+"events": []
+}
+ui_copy={
+"deadzone": 0.5,
+"events": []
+}
+ui_paste={
+"deadzone": 0.5,
+"events": []
+}
+ui_undo={
+"deadzone": 0.5,
+"events": []
+}
+ui_redo={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_completion_query={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_completion_accept={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_completion_replace={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_newline={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_newline_blank={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_newline_above={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_indent={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_dedent={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_backspace={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_backspace_word={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_backspace_word.macos={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_backspace_all_to_left.macos={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_delete={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_delete_word={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_delete_word.macos={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_delete_all_to_right.macos={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_caret_left={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_caret_word_left={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_caret_word_left.macos={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_caret_right={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_caret_word_right={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_caret_word_right.macos={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_caret_up={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_caret_down={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_caret_line_start={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_caret_line_start.macos={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_caret_line_end={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_caret_line_end.macos={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_caret_page_up={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_caret_page_down={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_caret_document_start={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_caret_document_start.macos={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_caret_document_end={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_caret_document_end.macos={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_caret_add_below={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_caret_add_below.macos={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_caret_add_above={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_caret_add_above.macos={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_scroll_up={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_scroll_up.macos={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_scroll_down={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_scroll_down.macos={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_select_all={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_select_word_under_caret={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_select_word_under_caret.macos={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_add_selection_for_next_occurrence={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_clear_carets_and_selection={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_toggle_insert_mode={
+"deadzone": 0.5,
+"events": []
+}
+ui_menu={
+"deadzone": 0.5,
+"events": []
+}
+ui_text_submit={
+"deadzone": 0.5,
+"events": []
+}
+ui_graph_duplicate={
+"deadzone": 0.5,
+"events": []
+}
+ui_graph_delete={
+"deadzone": 0.5,
+"events": []
+}
+ui_filedialog_up_one_level={
+"deadzone": 0.5,
+"events": []
+}
+ui_filedialog_refresh={
+"deadzone": 0.5,
+"events": []
+}
+ui_filedialog_show_hidden={
+"deadzone": 0.5,
+"events": []
+}
+ui_swap_input_direction={
+"deadzone": 0.5,
+"events": []
+}
+reset={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":82,"physical_keycode":0,"key_label":0,"unicode":114,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":3,"pressure":0.0,"pressed":false,"script":null)
+]
+}
+"exit game"={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194305,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":6,"pressure":0.0,"pressed":false,"script":null)
+]
+}
+1={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":49,"key_label":0,"unicode":49,"location":0,"echo":false,"script":null)
+]
+}
+2={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":50,"key_label":0,"unicode":50,"location":0,"echo":false,"script":null)
+]
+}
+.={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":46,"key_label":0,"unicode":46,"location":0,"echo":false,"script":null)
+]
+}
+,={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":44,"key_label":0,"unicode":44,"location":0,"echo":false,"script":null)
+]
+}
+3={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":51,"key_label":0,"unicode":51,"location":0,"echo":false,"script":null)
+]
+}
+4={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":52,"key_label":0,"unicode":52,"location":0,"echo":false,"script":null)
+]
+}
+h={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":72,"key_label":0,"unicode":104,"location":0,"echo":false,"script":null)
+]
+}
+y={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":89,"key_label":0,"unicode":121,"location":0,"echo":false,"script":null)
+]
+}
+debug_u={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":85,"key_label":0,"unicode":117,"location":0,"echo":false,"script":null)
+]
+}
+debug_i={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":73,"key_label":0,"unicode":105,"location":0,"echo":false,"script":null)
+]
+}
+debug_o={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":79,"key_label":0,"unicode":111,"location":0,"echo":false,"script":null)
+]
+}
+debug_n={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":78,"key_label":0,"unicode":110,"location":0,"echo":false,"script":null)
+]
+}
+debug_m={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":77,"key_label":0,"unicode":109,"location":0,"echo":false,"script":null)
+]
+}
+debug_b={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":66,"key_label":0,"unicode":98,"location":0,"echo":false,"script":null)
+]
+}
+
+[internationalization]
+
+locale/translation_remaps={}
+locale/translations=PackedStringArray("res://localization/Buckshot Roulette - Localization Sheet - Sheet28.BR.translation", "res://localization/Buckshot Roulette - Localization Sheet - Sheet28.DE.translation", "res://localization/Buckshot Roulette - Localization Sheet - Sheet28.EE.translation", "res://localization/Buckshot Roulette - Localization Sheet - Sheet28.EN.translation", "res://localization/Buckshot Roulette - Localization Sheet - Sheet28.ES.translation", "res://localization/Buckshot Roulette - Localization Sheet - Sheet28.FR.translation", "res://localization/Buckshot Roulette - Localization Sheet - Sheet28.IT.translation", "res://localization/Buckshot Roulette - Localization Sheet - Sheet28.JA.translation", "res://localization/Buckshot Roulette - Localization Sheet - Sheet28.KO.translation", "res://localization/Buckshot Roulette - Localization Sheet - Sheet28.PL.translation", "res://localization/Buckshot Roulette - Localization Sheet - Sheet28.PT.translation", "res://localization/Buckshot Roulette - Localization Sheet - Sheet28.RU.translation", "res://localization/Buckshot Roulette - Localization Sheet - Sheet28.TR.translation", "res://localization/Buckshot Roulette - Localization Sheet - Sheet28.UA.translation", "res://localization/Buckshot Roulette - Localization Sheet - Sheet28.ZHS.translation", "res://localization/Buckshot Roulette - Localization Sheet - Sheet28.ZHT.translation")
+locale/locale_filter_mode=0
+
+[rendering]
+
+textures/vram_compression/import_etc2_astc=true
+shading/overrides/force_vertex_shading.mobile=false
+shading/overrides/force_lambert_over_burley.mobile=false

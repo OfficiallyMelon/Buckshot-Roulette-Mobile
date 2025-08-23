@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bvjmpchrm50ii"
+path="res://.godot/imported/pick up magnifier.ogg-6df4b49ec7c020755d91e45bf3f3a631.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/pick up magnifier.ogg"
+dest_files=PackedStringArray("res://.godot/imported/pick up magnifier.ogg-6df4b49ec7c020755d91e45bf3f3a631.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

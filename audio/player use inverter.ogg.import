@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b6831shq37nxc"
+path="res://.godot/imported/player use inverter.ogg-c93f32b9d72e95cc44ab67177600711f.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/player use inverter.ogg"
+dest_files=PackedStringArray("res://.godot/imported/player use inverter.ogg-c93f32b9d72e95cc44ab67177600711f.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

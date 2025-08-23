@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b40k71cm4hjuc"
+path="res://.godot/imported/playtest menu.ogg-81ce299d55db723ecfc8cdf2b306960b.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/playtest menu.ogg"
+dest_files=PackedStringArray("res://.godot/imported/playtest menu.ogg-81ce299d55db723ecfc8cdf2b306960b.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

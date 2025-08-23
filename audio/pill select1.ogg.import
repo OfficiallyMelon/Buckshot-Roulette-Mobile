@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://is7y4crae653"
+path="res://.godot/imported/pill select1.ogg-001d00bc7e138bf3086ad4e6f3f78743.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/pill select1.ogg"
+dest_files=PackedStringArray("res://.godot/imported/pill select1.ogg-001d00bc7e138bf3086ad4e6f3f78743.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

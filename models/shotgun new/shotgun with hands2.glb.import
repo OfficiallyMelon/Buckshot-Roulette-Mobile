@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://chrlf326h3fqo"
+path="res://.godot/imported/shotgun with hands2.glb-179598454fcdf296820edfb8e62f1605.scn"
+
+[deps]
+
+source_file="res://models/shotgun new/shotgun with hands2.glb"
+dest_files=PackedStringArray("res://.godot/imported/shotgun with hands2.glb-179598454fcdf296820edfb8e62f1605.scn")
+
+[params]
+
+dummy_value_ignore_me=0

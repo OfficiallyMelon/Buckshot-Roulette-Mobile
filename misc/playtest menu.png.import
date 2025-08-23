@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://c8ujbxjeaftji"
+path="res://.godot/imported/playtest menu.png-1be93b8235ec968d57c2278b8139f2e5.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://misc/playtest menu.png"
+dest_files=PackedStringArray("res://.godot/imported/playtest menu.png-1be93b8235ec968d57c2278b8139f2e5.ctex")
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c13hgtsx4bwku"
+path="res://.godot/imported/crt_player walk.ogg-2987496c3cd1eba8a0af8c5b6378d576.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/crt_player walk.ogg"
+dest_files=PackedStringArray("res://.godot/imported/crt_player walk.ogg-2987496c3cd1eba8a0af8c5b6378d576.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

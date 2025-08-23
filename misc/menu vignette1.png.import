@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://xgfxvk1qci68"
+path="res://.godot/imported/menu vignette1.png-6a223a3719c3b578c8ef326590f7a136.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://misc/menu vignette1.png"
+dest_files=PackedStringArray("res://.godot/imported/menu vignette1.png-6a223a3719c3b578c8ef326590f7a136.ctex")
+
+[params]
+
+dummy_value_ignore_me=0

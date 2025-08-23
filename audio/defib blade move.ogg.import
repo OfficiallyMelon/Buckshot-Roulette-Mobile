@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://vlttw16atamq"
+path="res://.godot/imported/defib blade move.ogg-75bd2babba1d3276920fee3c65189295.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/defib blade move.ogg"
+dest_files=PackedStringArray("res://.godot/imported/defib blade move.ogg-75bd2babba1d3276920fee3c65189295.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

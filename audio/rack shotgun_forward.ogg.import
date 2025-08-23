@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bl22bnxgjgt8d"
+path="res://.godot/imported/rack shotgun_forward.ogg-1db76db72b175a66a6de2bf96162b453.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/rack shotgun_forward.ogg"
+dest_files=PackedStringArray("res://.godot/imported/rack shotgun_forward.ogg-1db76db72b175a66a6de2bf96162b453.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

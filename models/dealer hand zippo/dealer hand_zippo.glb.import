@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cnbbjv75036s5"
+path="res://.godot/imported/dealer hand_zippo.glb-f60d58526721f43dedfbdcfae9ec7a45.scn"
+
+[deps]
+
+source_file="res://models/dealer hand zippo/dealer hand_zippo.glb"
+dest_files=PackedStringArray("res://.godot/imported/dealer hand_zippo.glb-f60d58526721f43dedfbdcfae9ec7a45.scn")
+
+[params]
+
+dummy_value_ignore_me=0

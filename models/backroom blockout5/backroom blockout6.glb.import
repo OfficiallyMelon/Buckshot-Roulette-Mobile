@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://db110l5qhe7bn"
+path="res://.godot/imported/backroom blockout6.glb-5cd1fef656887265e1c1002efe847a21.scn"
+
+[deps]
+
+source_file="res://models/backroom blockout5/backroom blockout6.glb"
+dest_files=PackedStringArray("res://.godot/imported/backroom blockout6.glb-5cd1fef656887265e1c1002efe847a21.scn")
+
+[params]
+
+dummy_value_ignore_me=0

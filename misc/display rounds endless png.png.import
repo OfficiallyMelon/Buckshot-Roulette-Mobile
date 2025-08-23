@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cqhw6k6mcwbj"
+path="res://.godot/imported/display rounds endless png.png-da24e22e282c2af58922520f2f5a4e3a.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://misc/display rounds endless png.png"
+dest_files=PackedStringArray("res://.godot/imported/display rounds endless png.png-da24e22e282c2af58922520f2f5a4e3a.ctex")
+
+[params]
+
+dummy_value_ignore_me=0

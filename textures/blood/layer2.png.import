@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://b82wni4jqkyev"
+path="res://.godot/imported/layer2.png-1daa6657b1562691c13a0cefe265f5fb.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://textures/blood/layer2.png"
+dest_files=PackedStringArray("res://.godot/imported/layer2.png-1daa6657b1562691c13a0cefe265f5fb.ctex")
+
+[params]
+
+dummy_value_ignore_me=0

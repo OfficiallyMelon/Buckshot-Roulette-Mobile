@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dw3cdym44te0o"
+path="res://.godot/imported/grab item2.ogg-e310fc29f0bf5bd250428482c0783e9e.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/grab item2.ogg"
+dest_files=PackedStringArray("res://.godot/imported/grab item2.ogg-e310fc29f0bf5bd250428482c0783e9e.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

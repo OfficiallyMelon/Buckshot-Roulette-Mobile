@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cegt3y5c4ypdm"
+path="res://.godot/imported/death temp.ogg-d4f3bc0904963d50f4f9556487e43e4a.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/death temp.ogg"
+dest_files=PackedStringArray("res://.godot/imported/death temp.ogg-d4f3bc0904963d50f4f9556487e43e4a.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

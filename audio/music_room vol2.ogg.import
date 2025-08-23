@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://eqqc1ho52eh5"
+path="res://.godot/imported/music_room vol2.ogg-cf674bed7934ff4f8a050e50725b65f9.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/music_room vol2.ogg"
+dest_files=PackedStringArray("res://.godot/imported/music_room vol2.ogg-cf674bed7934ff4f8a050e50725b65f9.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

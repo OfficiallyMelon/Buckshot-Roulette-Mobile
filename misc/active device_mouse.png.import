@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bq2sqdmu8vtte"
+path="res://.godot/imported/active device_mouse.png-798727ddd2788ea3b6939c640e5b6429.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://misc/active device_mouse.png"
+dest_files=PackedStringArray("res://.godot/imported/active device_mouse.png-798727ddd2788ea3b6939c640e5b6429.ctex")
+
+[params]
+
+dummy_value_ignore_me=0

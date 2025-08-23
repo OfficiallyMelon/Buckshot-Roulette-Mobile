@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://buw4o7ia7e8kf"
+path="res://.godot/imported/round blinker wave.ogg-01c9b8061e7f9eaa148fecdda5dcfafa.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/round blinker wave.ogg"
+dest_files=PackedStringArray("res://.godot/imported/round blinker wave.ogg-01c9b8061e7f9eaa148fecdda5dcfafa.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dothgdnfxjwg"
+path="res://.godot/imported/volta3.ogg-6960a7c9cf0d0681d5a5b8d62c49d02f.oggvorbisstr"
+
+[deps]
+
+source_file="res://instances/volta3.ogg"
+dest_files=PackedStringArray("res://.godot/imported/volta3.ogg-6960a7c9cf0d0681d5a5b8d62c49d02f.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

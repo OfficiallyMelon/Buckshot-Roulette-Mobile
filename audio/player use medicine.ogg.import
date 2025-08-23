@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://insfiyeg2kuo"
+path="res://.godot/imported/player use medicine.ogg-b77c9e524a256e2b883f42cb24deb407.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/player use medicine.ogg"
+dest_files=PackedStringArray("res://.godot/imported/player use medicine.ogg-b77c9e524a256e2b883f42cb24deb407.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

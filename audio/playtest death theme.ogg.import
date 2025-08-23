@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b3scrk6ocimpg"
+path="res://.godot/imported/playtest death theme.ogg-26d537adbf6f02a1eb6037d6f37d1478.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/playtest death theme.ogg"
+dest_files=PackedStringArray("res://.godot/imported/playtest death theme.ogg-26d537adbf6f02a1eb6037d6f37d1478.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

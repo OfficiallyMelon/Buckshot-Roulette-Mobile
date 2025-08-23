@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://ckw5poemwwo7p"
+path="res://.godot/imported/crt icon_friends2.png-5299bce8b93187f6d972fc9b7a5a1745.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://misc/crt icon_friends2.png"
+dest_files=PackedStringArray("res://.godot/imported/crt icon_friends2.png-5299bce8b93187f6d972fc9b7a5a1745.ctex")
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cym8nf5m1igrx"
+path="res://.godot/imported/engine icon1.png-a20de600242f49d26507c64ed0a0b042.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://misc/engine icon1.png"
+dest_files=PackedStringArray("res://.godot/imported/engine icon1.png-a20de600242f49d26507c64ed0a0b042.ctex")
+
+[params]
+
+dummy_value_ignore_me=0

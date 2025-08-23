@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cecc4k2d5ebu0"
+path="res://.godot/imported/ZfBQfxhGP0.png-455130c9d08902ebccf152b71a4304d0.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://instances/ZfBQfxhGP0.png"
+dest_files=PackedStringArray("res://.godot/imported/ZfBQfxhGP0.png-455130c9d08902ebccf152b71a4304d0.ctex")
+
+[params]
+
+dummy_value_ignore_me=0

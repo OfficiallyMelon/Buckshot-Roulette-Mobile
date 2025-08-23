@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://hm48c625bpsg"
+path="res://.godot/imported/interact with fin2.png-c434edb22ca24f7296a64c0f2fdc7b02.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://misc/interact with fin2.png"
+dest_files=PackedStringArray("res://.godot/imported/interact with fin2.png-c434edb22ca24f7296a64c0f2fdc7b02.ctex")
+
+[params]
+
+dummy_value_ignore_me=0

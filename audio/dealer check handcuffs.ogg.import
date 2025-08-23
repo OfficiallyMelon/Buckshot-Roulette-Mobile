@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ch0x7wtp6yj6m"
+path="res://.godot/imported/dealer check handcuffs.ogg-59d21671306112dd4cc06f9beab2267b.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/dealer check handcuffs.ogg"
+dest_files=PackedStringArray("res://.godot/imported/dealer check handcuffs.ogg-59d21671306112dd4cc06f9beab2267b.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

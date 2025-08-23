@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cn8v6oyjny2us"
+path="res://.godot/imported/dealer hands on table1.glb-641465ee7621d821e78aaaae8f690584.scn"
+
+[deps]
+
+source_file="res://models/dealer hands on table/dealer hands on table1.glb"
+dest_files=PackedStringArray("res://.godot/imported/dealer hands on table1.glb-641465ee7621d821e78aaaae8f690584.scn")
+
+[params]
+
+dummy_value_ignore_me=0

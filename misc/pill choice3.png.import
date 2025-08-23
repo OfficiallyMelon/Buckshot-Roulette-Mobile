@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://ukp6vve0eovm"
+path="res://.godot/imported/pill choice3.png-cf8608bf0aed70e14b7ee8ce0740f9c2.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://misc/pill choice3.png"
+dest_files=PackedStringArray("res://.godot/imported/pill choice3.png-cf8608bf0aed70e14b7ee8ce0740f9c2.ctex")
+
+[params]
+
+dummy_value_ignore_me=0

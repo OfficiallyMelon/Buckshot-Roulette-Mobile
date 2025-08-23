@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bbg6b6junvnr2"
+path="res://.godot/imported/signature machine bootup high pass.ogg-84fdc5a26163151d386bcfebf3570a35.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/signature machine bootup high pass.ogg"
+dest_files=PackedStringArray("res://.godot/imported/signature machine bootup high pass.ogg-84fdc5a26163151d386bcfebf3570a35.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

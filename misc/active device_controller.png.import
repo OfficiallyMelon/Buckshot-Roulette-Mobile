@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dc565vro1jwtm"
+path="res://.godot/imported/active device_controller.png-686ffb44b7300f73fd576fa01be5a173.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://misc/active device_controller.png"
+dest_files=PackedStringArray("res://.godot/imported/active device_controller.png-686ffb44b7300f73fd576fa01be5a173.ctex")
+
+[params]
+
+dummy_value_ignore_me=0

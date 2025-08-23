@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://d30bumx747fb2"
+path="res://.godot/imported/heaven pokers1.glb-611189450bb73c1fb42756f6417c5ae1.scn"
+
+[deps]
+
+source_file="res://models/heaven1/heaven pokers1.glb"
+dest_files=PackedStringArray("res://.godot/imported/heaven pokers1.glb-611189450bb73c1fb42756f6417c5ae1.scn")
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3]
+
+[ext_resource type="Texture2D" uid="uid://v177b8mgbkke" path="res://textures/blood/layer3.png" id="1"]
+
+[resource]
+blend_mode = 1
+shading_mode = 0
+albedo_texture = ExtResource("1")
+script = null

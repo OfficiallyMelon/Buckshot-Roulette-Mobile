@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cw8718ngpktp6"
+path="res://.godot/imported/car interior main true2.png-6619379767e7ee10a363f22c09fd2245.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://textures/car interior main true2.png"
+dest_files=PackedStringArray("res://.godot/imported/car interior main true2.png-6619379767e7ee10a363f22c09fd2245.ctex")
+
+[params]
+
+dummy_value_ignore_me=0

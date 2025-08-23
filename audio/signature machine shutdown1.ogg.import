@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dpc1he6teqexw"
+path="res://.godot/imported/signature machine shutdown1.ogg-12612896ada7d112cf78ad7f0f1576c8.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/signature machine shutdown1.ogg"
+dest_files=PackedStringArray("res://.godot/imported/signature machine shutdown1.ogg-12612896ada7d112cf78ad7f0f1576c8.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cgmufm1akvafg"
+path="res://.godot/imported/sample object export1.glb-7f62cb49708131f93445a3f268036158.scn"
+
+[deps]
+
+source_file="res://models/sample object/sample object export1.glb"
+dest_files=PackedStringArray("res://.godot/imported/sample object export1.glb-7f62cb49708131f93445a3f268036158.scn")
+
+[params]
+
+dummy_value_ignore_me=0

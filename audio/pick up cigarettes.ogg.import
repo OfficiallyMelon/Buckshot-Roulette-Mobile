@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bh65i4noa0i2"
+path="res://.godot/imported/pick up cigarettes.ogg-f0b060e615cf0fd6bc4e2c6c4c020065.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/pick up cigarettes.ogg"
+dest_files=PackedStringArray("res://.godot/imported/pick up cigarettes.ogg-f0b060e615cf0fd6bc4e2c6c4c020065.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bmg6flk6ue1d5"
+path="res://.godot/imported/double or nothing bootup.ogg-ea6f2a9195e30e7ee81ad11d13a19232.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/double or nothing bootup.ogg"
+dest_files=PackedStringArray("res://.godot/imported/double or nothing bootup.ogg-ea6f2a9195e30e7ee81ad11d13a19232.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

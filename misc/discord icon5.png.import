@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cbcd1l3ubcfji"
+path="res://.godot/imported/discord icon5.png-2d8d9d37f0040405f1b32c290318d8fd.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://misc/discord icon5.png"
+dest_files=PackedStringArray("res://.godot/imported/discord icon5.png-2d8d9d37f0040405f1b32c290318d8fd.ctex")
+
+[params]
+
+dummy_value_ignore_me=0

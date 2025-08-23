@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://c5buoft3btw8t"
+path="res://.godot/imported/crt sa1.glb-f7ad1564c1f58cac05959ba855009d50.scn"
+
+[deps]
+
+source_file="res://models/crt sa11/crt sa1.glb"
+dest_files=PackedStringArray("res://.godot/imported/crt sa1.glb-f7ad1564c1f58cac05959ba855009d50.scn")
+
+[params]
+
+dummy_value_ignore_me=0

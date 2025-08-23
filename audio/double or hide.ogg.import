@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dtstp2pxucuvc"
+path="res://.godot/imported/double or hide.ogg-3cedfc3a658d8d100387e8e76d3688be.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/double or hide.ogg"
+dest_files=PackedStringArray("res://.godot/imported/double or hide.ogg-3cedfc3a658d8d100387e8e76d3688be.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

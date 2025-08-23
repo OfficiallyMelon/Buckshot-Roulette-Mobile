@@ -1,0 +1,16 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bdb562u8o5mtw"
+path="res://.godot/imported/temp gunshot_live.wav-d77f5145ffed6ecdc5018d0a8da50ccb.sample"
+
+[deps]
+
+source_file="res://audio/temp gunshot_live.wav"
+dest_files=PackedStringArray("res://.godot/imported/temp gunshot_live.wav-d77f5145ffed6ecdc5018d0a8da50ccb.sample")
+
+[params]
+
+dummy_value_ignore_me=0
+compress/mode=0

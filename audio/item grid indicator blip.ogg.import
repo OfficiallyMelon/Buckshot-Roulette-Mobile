@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ku54dowff5ao"
+path="res://.godot/imported/item grid indicator blip.ogg-b1ac2cebd9a124f50296885c82a5fa24.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/item grid indicator blip.ogg"
+dest_files=PackedStringArray("res://.godot/imported/item grid indicator blip.ogg-b1ac2cebd9a124f50296885c82a5fa24.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

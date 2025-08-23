@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cn03fjgv67j8l"
+path="res://.godot/imported/dealer hands on table_cuffed.ogg-f0a5d7bfc4246e3c60a236beecc3ef0d.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/dealer hands on table_cuffed.ogg"
+dest_files=PackedStringArray("res://.godot/imported/dealer hands on table_cuffed.ogg-f0a5d7bfc4246e3c60a236beecc3ef0d.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

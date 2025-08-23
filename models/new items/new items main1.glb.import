@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://dua5tt151cgqv"
+path="res://.godot/imported/new items main1.glb-322da063617e92526078b7f0316c972d.scn"
+
+[deps]
+
+source_file="res://models/new items/new items main1.glb"
+dest_files=PackedStringArray("res://.godot/imported/new items main1.glb-322da063617e92526078b7f0316c972d.scn")
+
+[params]
+
+dummy_value_ignore_me=0

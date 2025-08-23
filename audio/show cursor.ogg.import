@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bjdi7iwcps58"
+path="res://.godot/imported/show cursor.ogg-2bb95e66431506e9ad89c1a933ae83fb.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/show cursor.ogg"
+dest_files=PackedStringArray("res://.godot/imported/show cursor.ogg-2bb95e66431506e9ad89c1a933ae83fb.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

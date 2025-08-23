@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cntbq53qumbvw"
+path="res://.godot/imported/defib bootup.ogg-4fe64b8112bf5517b5016f3638c74246.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/defib bootup.ogg"
+dest_files=PackedStringArray("res://.godot/imported/defib bootup.ogg-4fe64b8112bf5517b5016f3638c74246.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

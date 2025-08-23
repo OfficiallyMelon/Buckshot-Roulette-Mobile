@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://d3pxmrma781q5"
+path="res://.godot/imported/dealer head crushed test.glb-68948ae74346df69d8bcd0ab582ec6c9.scn"
+
+[deps]
+
+source_file="res://models/dealer head crushed/dealer head crushed test.glb"
+dest_files=PackedStringArray("res://.godot/imported/dealer head crushed test.glb-68948ae74346df69d8bcd0ab582ec6c9.scn")
+
+[params]
+
+dummy_value_ignore_me=0

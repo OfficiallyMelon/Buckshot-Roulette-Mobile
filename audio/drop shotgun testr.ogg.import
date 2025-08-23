@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cbxsx0eyja666"
+path="res://.godot/imported/drop shotgun testr.ogg-a65c7fa9525c3f0e22ec9ddf43638a24.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/drop shotgun testr.ogg"
+dest_files=PackedStringArray("res://.godot/imported/drop shotgun testr.ogg-a65c7fa9525c3f0e22ec9ddf43638a24.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

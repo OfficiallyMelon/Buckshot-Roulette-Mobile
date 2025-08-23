@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://doxgjy2ayiih4"
+path="res://.godot/imported/master vol.png-0b271cc34b239435607c9e600797e599.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://misc/master vol.png"
+dest_files=PackedStringArray("res://.godot/imported/master vol.png-0b271cc34b239435607c9e600797e599.ctex")
+
+[params]
+
+dummy_value_ignore_me=0

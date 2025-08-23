@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d0xgebvvvwrc6"
+path="res://.godot/imported/club ambience1.ogg-64c67ec46add79ba8cb965bb556e10a3.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/club ambience1.ogg"
+dest_files=PackedStringArray("res://.godot/imported/club ambience1.ogg-64c67ec46add79ba8cb965bb556e10a3.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

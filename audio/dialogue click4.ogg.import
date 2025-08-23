@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://83k0kb8cct8o"
+path="res://.godot/imported/dialogue click4.ogg-11ef9699dc8dc6503019e99f919d678b.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/dialogue click4.ogg"
+dest_files=PackedStringArray("res://.godot/imported/dialogue click4.ogg-11ef9699dc8dc6503019e99f919d678b.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

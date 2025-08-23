@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c4wea7spoym1a"
+path="res://.godot/imported/camera pan test.ogg-e64f34dd9ff2ae8407a39b4a13aee127.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/camera pan test.ogg"
+dest_files=PackedStringArray("res://.godot/imported/camera pan test.ogg-e64f34dd9ff2ae8407a39b4a13aee127.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

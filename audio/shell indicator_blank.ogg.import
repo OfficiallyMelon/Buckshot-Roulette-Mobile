@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dkl8fww3n65ct"
+path="res://.godot/imported/shell indicator_blank.ogg-726c8919e0a32a221e1a6864cc66a1fe.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/shell indicator_blank.ogg"
+dest_files=PackedStringArray("res://.godot/imported/shell indicator_blank.ogg-726c8919e0a32a221e1a6864cc66a1fe.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

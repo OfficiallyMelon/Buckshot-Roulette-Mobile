@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dedtwku3flpwn"
+path="res://.godot/imported/cursor xp_point.png-696693a933cc245e900b3dcd4f51057e.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://misc/cursor xp_point.png"
+dest_files=PackedStringArray("res://.godot/imported/cursor xp_point.png-696693a933cc245e900b3dcd4f51057e.ctex")
+
+[params]
+
+dummy_value_ignore_me=0

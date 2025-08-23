@@ -1,0 +1,16 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://ii3nwsyk5hwe"
+path="res://.godot/imported/dealer temp model export1.glb-2e30521658a42a58330a43a6a4bcecb3.scn"
+
+[deps]
+
+source_file="res://models/temp delaer export1/dealer temp model export1.glb"
+dest_files=PackedStringArray("res://.godot/imported/dealer temp model export1.glb-2e30521658a42a58330a43a6a4bcecb3.scn")
+
+[params]
+
+dummy_value_ignore_me=0

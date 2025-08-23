@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ts51la4pn6pp"
+path="res://.godot/imported/dealer use handsaw.ogg-0d13b70c93f96bc0085f8bcc98d078d9.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/dealer use handsaw.ogg"
+dest_files=PackedStringArray("res://.godot/imported/dealer use handsaw.ogg-0d13b70c93f96bc0085f8bcc98d078d9.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0

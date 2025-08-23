@@ -1,0 +1,15 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b7yyy2h6m7nci"
+path="res://.godot/imported/dialogue click_ending.ogg-b90d793bc35dee8a52ba2743c98bc801.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/dialogue click_ending.ogg"
+dest_files=PackedStringArray("res://.godot/imported/dialogue click_ending.ogg-b90d793bc35dee8a52ba2743c98bc801.oggvorbisstr")
+
+[params]
+
+dummy_value_ignore_me=0
