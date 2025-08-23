@@ -13,7 +13,7 @@ jobs:
   build:
     runs-on: macos-14
     env:
-      GODOT_VERSION: "4.2.2"
+      GODOT_VERSION: "4.3"
       EXPORT_PRESET_IOS: "iOS"
       EXPORT_PRESET_ANDROID: "Android"
       EXPORT_DIR_IOS: "build/ios"
@@ -32,14 +32,14 @@ jobs:
           set -euxo pipefail
           mkdir -p tools/godot
           cd tools/godot
-          curl -L -o godot.zip "https://downloads.tuxfamily.org/godotengine/${GODOT_VERSION}/Godot_v${GODOT_VERSION}-stable_macos.universal.zip"
+          curl -L -o godot.zip "https://github.com/godotengine/godot-builds/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_macos.universal.zip"
           unzip -q godot.zip
           mv Godot.app/Contents/MacOS/Godot Godot
           chmod +x Godot
           cd -
           TEMPLATES_DIR="$HOME/Library/Application Support/Godot/export_templates/${GODOT_VERSION}.stable"
           mkdir -p "${TEMPLATES_DIR}"
-          curl -L -o templates.tpz "https://downloads.tuxfamily.org/godotengine/${GODOT_VERSION}/Godot_v${GODOT_VERSION}-stable_export_templates.tpz"
+          curl -L -o templates.tpz "https://github.com/godotengine/godot-builds/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_export_templates.tpz"
           unzip -q templates.tpz -d templates_unpacked
           cp -R templates_unpacked/templates/* "${TEMPLATES_DIR}/"
 
@@ -60,17 +60,8 @@ jobs:
         run: |
           set -euxo pipefail
           PROJ=$(ls "${EXPORT_DIR_IOS}"/*.xcodeproj | head -n1)
-          SCHEME=$(/usr/libexec/PlistBuddy -c "Print :objects" "${PROJ}/project.pbxproj" \
-            | sed -n '/isa = PBXNativeTarget/,/}/p' | sed -n 's/.*name = \(.*\);.*/\1/p' | head -n1)
-          xcodebuild \
-            -project "${PROJ}" \
-            -scheme "${SCHEME}" \
-            -configuration Release \
-            -archivePath "${ARCHIVE_PATH}" \
-            -destination 'generic/platform=iOS' \
-            CODE_SIGNING_ALLOWED=NO \
-            CODE_SIGNING_REQUIRED=NO \
-            clean archive | xcpretty || true
+          SCHEME=$(/usr/libexec/PlistBuddy -c "Print :objects" "${PROJ}/project.pbxproj" | sed -n '/isa = PBXNativeTarget/,/}/p' | sed -n 's/.*name = \(.*\);.*/\1/p' | head -n1)
+          xcodebuild -project "${PROJ}" -scheme "${SCHEME}" -configuration Release -archivePath "${ARCHIVE_PATH}" -destination 'generic/platform=iOS' CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO clean archive | xcpretty || true
           test -d "${ARCHIVE_PATH}"
 
       - name: Create .ipa
