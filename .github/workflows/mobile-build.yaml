@@ -54,7 +54,22 @@ jobs:
       - name: Set iOS deployment target
         run: |
           set -euxo pipefail
-          PROJ=$(ls "${EXPORT_DIR_IOS}"/*.xcodeproj | head -n1)
+          PROJ="$(/usr/bin/find "${EXPORT_DIR_IOS}" -maxdepth 4 -type d -name '*.xcodeproj' -print -quit)"
+          if [[ -z "$PROJ" ]]; then
+            echo "No .xcodeproj found under ${EXPORT_DIR_IOS}. Contents:"
+            find "${EXPORT_DIR_IOS}" -maxdepth 4 -print || true
+            echo "Likely the preset didn’t export Project Only. Dumping iOS preset:"
+            awk '
+              BEGIN{p=0}
+              /^\[preset\.[0-9]+\]/{p=0}
+              /\[preset\.[0-9]+\]/{blk=$0}
+              /platform="iOS"/{p=1; print blk}
+              p && /\[preset\.[0-9]+\.options\]/{print; next}
+              p && /^[^[]/{print}
+            ' export_presets.cfg || true
+            exit 1
+          fi
+          echo "Using Xcode project: ${PROJ}"
           PBX="${PROJ}/project.pbxproj"
           perl -0777 -pe "s/IPHONEOS_DEPLOYMENT_TARGET = [0-9.]+;/IPHONEOS_DEPLOYMENT_TARGET = ${DEPLOYMENT_TARGET};/g" -i "${PBX}"
 
