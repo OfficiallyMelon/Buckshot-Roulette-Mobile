@@ -24,8 +24,10 @@ jobs:
       DEPLOYMENT_TARGET: "12.0"
 
     steps:
-      - name: Checkout
+      - name: Checkout (with LFS)
         uses: actions/checkout@v4
+        with:
+          lfs: true
 
       - name: Install Godot (headless) and templates
         run: |
