@@ -29,6 +29,10 @@ jobs:
         with:
           lfs: true
 
+      - name: Install xcpretty
+        run: |
+          sudo gem install xcpretty
+
       - name: Install Godot (headless) and templates
         run: |
           set -euxo pipefail
@@ -54,11 +58,12 @@ jobs:
       - name: Set iOS deployment target
         run: |
           set -euxo pipefail
-          PROJ="$(/usr/bin/find "${EXPORT_DIR_IOS}/../" -maxdepth 4 -type d -name '*.xcodeproj' -print -quit)"
-          if [[ -z "$PROJ" ]]; then
-            echo "No .xcodeproj found under ${EXPORT_DIR_IOS}. Contents:"
+          PROJ_BUNDLE="$(/usr/bin/find "${EXPORT_DIR_IOS}/../" -maxdepth 4 -type d -name '*.xcodeproj' -print -quit || true)"
+          if [[ -z "${PROJ_BUNDLE}" ]]; then
+            echo "No .xcodeproj found near ${EXPORT_DIR_IOS}"
+            echo "Tree under ${EXPORT_DIR_IOS}:"
             find "${EXPORT_DIR_IOS}" -maxdepth 4 -print || true
-            echo "Likely the preset didn’t export Project Only. Dumping iOS preset:"
+            echo "Dumping iOS export preset from export_presets.cfg for debugging:"
             awk '
               BEGIN{p=0}
               /^\[preset\.[0-9]+\]/{p=0}
@@ -69,24 +74,57 @@ jobs:
             ' export_presets.cfg || true
             exit 1
           fi
-          echo "Using Xcode project: ${PROJ}"
-          PBX="${PROJ}/project.pbxproj"
+          echo "Using Xcode project: ${PROJ_BUNDLE}"
+          PBX="${PROJ_BUNDLE}/project.pbxproj"
           perl -0777 -pe "s/IPHONEOS_DEPLOYMENT_TARGET = [0-9.]+;/IPHONEOS_DEPLOYMENT_TARGET = ${DEPLOYMENT_TARGET};/g" -i "${PBX}"
 
       - name: Build .xcarchive (unsigned)
         run: |
           set -euxo pipefail
-          PROJ=$(ls "${EXPORT_DIR_IOS}/../"/*.xcodeproj | head -n1)
-          SCHEME=$(/usr/libexec/PlistBuddy -c "Print :objects" "${PROJ}/project.pbxproj" | sed -n '/isa = PBXNativeTarget/,/}/p' | sed -n 's/.*name = \(.*\);.*/\1/p' | head -n1)
-          xcodebuild -project "${PROJ}" -scheme "${SCHEME}" -configuration Release -archivePath "${ARCHIVE_PATH}" -destination 'generic/platform=iOS' CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO clean archive | xcpretty || true
+          PROJ_BUNDLE="$(/usr/bin/find "${EXPORT_DIR_IOS}/../" -maxdepth 4 -type d -name '*.xcodeproj' -print -quit || true)"
+          if [[ -z "${PROJ_BUNDLE}" ]]; then
+            echo "No .xcodeproj found for build step."
+            exit 1
+          fi
+          echo "Using Xcode project: ${PROJ_BUNDLE}"
+
+          SCHEME="$(xcodebuild -list -json -project "${PROJ_BUNDLE}" \
+            | /usr/bin/python3 -c 'import sys,json; d=json.load(sys.stdin); p=d.get("project",{}); s=p.get("schemes",[]); print(s[0] if s else "")')"
+
+          if [[ -z "${SCHEME}" ]]; then
+            echo "No schemes found in ${PROJ_BUNDLE}"
+            xcodebuild -list -project "${PROJ_BUNDLE}" || true
+            exit 1
+          fi
+          echo "Using scheme: ${SCHEME}"
+
+          xcodebuild \
+            -project "${PROJ_BUNDLE}" \
+            -scheme "${SCHEME}" \
+            -configuration Release \
+            -archivePath "${ARCHIVE_PATH}" \
+            -destination 'generic/platform=iOS' \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO \
+            clean archive | xcpretty
+
           test -d "${ARCHIVE_PATH}"
 
       - name: Create .ipa (unsigned)
         run: |
           set -euxo pipefail
           APP_DIR="${ARCHIVE_PATH}/Products/Applications"
+          if [[ ! -d "${APP_DIR}" ]]; then
+            echo "Archive missing Applications dir: ${APP_DIR}"
+            find "${ARCHIVE_PATH}" -maxdepth 4 -print
+            exit 1
+          fi
           APP_PATH="$(ls "${APP_DIR}"/*.app | head -n1 || true)"
-          rm -rf Payload && mkdir Payload
+          if [[ -z "${APP_PATH}" ]]; then
+            echo "No .app found in ${APP_DIR}"
+            exit 1
+          fi
+          rm -rf Payload
+          mkdir -p Payload
           cp -R "${APP_PATH}" Payload/
           /usr/bin/zip -qry "${IPA_NAME}" Payload
 
