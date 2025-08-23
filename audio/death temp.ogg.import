@@ -8,8 +8,12 @@ path="res://.godot/imported/death temp.ogg-d4f3bc0904963d50f4f9556487e43e4a.oggv
 [deps]
 
 source_file="res://audio/death temp.ogg"
-dest_files=PackedStringArray("res://.godot/imported/death temp.ogg-d4f3bc0904963d50f4f9556487e43e4a.oggvorbisstr")
+dest_files=["res://.godot/imported/death temp.ogg-d4f3bc0904963d50f4f9556487e43e4a.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

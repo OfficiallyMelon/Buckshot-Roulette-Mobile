@@ -8,8 +8,12 @@ path="res://.godot/imported/place down magnifier2.ogg-32713ff697f83f842a76a7dcf5
 [deps]
 
 source_file="res://audio/place down magnifier2.ogg"
-dest_files=PackedStringArray("res://.godot/imported/place down magnifier2.ogg-32713ff697f83f842a76a7dcf5a89a85.oggvorbisstr")
+dest_files=["res://.godot/imported/place down magnifier2.ogg-32713ff697f83f842a76a7dcf5a89a85.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

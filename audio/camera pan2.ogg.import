@@ -8,8 +8,12 @@ path="res://.godot/imported/camera pan2.ogg-6fb79170a78242964f5f30d87cd1e815.ogg
 [deps]
 
 source_file="res://audio/camera pan2.ogg"
-dest_files=PackedStringArray("res://.godot/imported/camera pan2.ogg-6fb79170a78242964f5f30d87cd1e815.oggvorbisstr")
+dest_files=["res://.godot/imported/camera pan2.ogg-6fb79170a78242964f5f30d87cd1e815.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

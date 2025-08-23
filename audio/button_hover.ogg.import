@@ -8,8 +8,12 @@ path="res://.godot/imported/button_hover.ogg-2b9923237eb601795538e26bc97badaa.og
 [deps]
 
 source_file="res://audio/button_hover.ogg"
-dest_files=PackedStringArray("res://.godot/imported/button_hover.ogg-2b9923237eb601795538e26bc97badaa.oggvorbisstr")
+dest_files=["res://.godot/imported/button_hover.ogg-2b9923237eb601795538e26bc97badaa.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

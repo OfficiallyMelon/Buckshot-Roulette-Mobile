@@ -8,8 +8,12 @@ path="res://.godot/imported/gun foley6.ogg-41a6bfa1f333ed75cf71ca459875ef4f.oggv
 [deps]
 
 source_file="res://audio/gun foley6.ogg"
-dest_files=PackedStringArray("res://.godot/imported/gun foley6.ogg-41a6bfa1f333ed75cf71ca459875ef4f.oggvorbisstr")
+dest_files=["res://.godot/imported/gun foley6.ogg-41a6bfa1f333ed75cf71ca459875ef4f.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

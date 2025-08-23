@@ -8,8 +8,12 @@ path="res://.godot/imported/place down inverter.ogg-f0d8fc65b7c8ef2c193acae17da5
 [deps]
 
 source_file="res://audio/place down inverter.ogg"
-dest_files=PackedStringArray("res://.godot/imported/place down inverter.ogg-f0d8fc65b7c8ef2c193acae17da52f67.oggvorbisstr")
+dest_files=["res://.godot/imported/place down inverter.ogg-f0d8fc65b7c8ef2c193acae17da52f67.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

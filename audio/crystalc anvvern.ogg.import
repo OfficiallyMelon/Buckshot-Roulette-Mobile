@@ -8,8 +8,12 @@ path="res://.godot/imported/crystalc anvvern.ogg-e661107ee3a9d64720fb6d25432fe0a
 [deps]
 
 source_file="res://audio/crystalc anvvern.ogg"
-dest_files=PackedStringArray("res://.godot/imported/crystalc anvvern.ogg-e661107ee3a9d64720fb6d25432fe0a8.oggvorbisstr")
+dest_files=["res://.godot/imported/crystalc anvvern.ogg-e661107ee3a9d64720fb6d25432fe0a8.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

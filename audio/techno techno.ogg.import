@@ -8,8 +8,12 @@ path="res://.godot/imported/techno techno.ogg-bceb8f53a2cf679100cc3c48eefb42c8.o
 [deps]
 
 source_file="res://audio/techno techno.ogg"
-dest_files=PackedStringArray("res://.godot/imported/techno techno.ogg-bceb8f53a2cf679100cc3c48eefb42c8.oggvorbisstr")
+dest_files=["res://.godot/imported/techno techno.ogg-bceb8f53a2cf679100cc3c48eefb42c8.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

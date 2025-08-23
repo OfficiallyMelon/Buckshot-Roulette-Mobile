@@ -8,8 +8,12 @@ path="res://.godot/imported/check item_pickup.ogg-21b9b7460abb2dfd0ee87ef34859bb
 [deps]
 
 source_file="res://audio/check item_pickup.ogg"
-dest_files=PackedStringArray("res://.godot/imported/check item_pickup.ogg-21b9b7460abb2dfd0ee87ef34859bb94.oggvorbisstr")
+dest_files=["res://.godot/imported/check item_pickup.ogg-21b9b7460abb2dfd0ee87ef34859bb94.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

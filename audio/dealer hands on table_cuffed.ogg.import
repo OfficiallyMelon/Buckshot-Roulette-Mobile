@@ -8,8 +8,12 @@ path="res://.godot/imported/dealer hands on table_cuffed.ogg-f0a5d7bfc4246e3c60a
 [deps]
 
 source_file="res://audio/dealer hands on table_cuffed.ogg"
-dest_files=PackedStringArray("res://.godot/imported/dealer hands on table_cuffed.ogg-f0a5d7bfc4246e3c60a236beecc3ef0d.oggvorbisstr")
+dest_files=["res://.godot/imported/dealer hands on table_cuffed.ogg-f0a5d7bfc4246e3c60a236beecc3ef0d.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

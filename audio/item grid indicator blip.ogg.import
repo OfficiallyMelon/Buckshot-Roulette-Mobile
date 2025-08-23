@@ -8,8 +8,12 @@ path="res://.godot/imported/item grid indicator blip.ogg-b1ac2cebd9a124f50296885
 [deps]
 
 source_file="res://audio/item grid indicator blip.ogg"
-dest_files=PackedStringArray("res://.godot/imported/item grid indicator blip.ogg-b1ac2cebd9a124f50296885c82a5fa24.oggvorbisstr")
+dest_files=["res://.godot/imported/item grid indicator blip.ogg-b1ac2cebd9a124f50296885c82a5fa24.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -8,8 +8,12 @@ path="res://.godot/imported/place down burner phone.ogg-63f3bebcafac6c246a0e09c1
 [deps]
 
 source_file="res://audio/place down burner phone.ogg"
-dest_files=PackedStringArray("res://.godot/imported/place down burner phone.ogg-63f3bebcafac6c246a0e09c19d7c15cd.oggvorbisstr")
+dest_files=["res://.godot/imported/place down burner phone.ogg-63f3bebcafac6c246a0e09c19d7c15cd.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

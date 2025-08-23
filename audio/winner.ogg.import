@@ -8,8 +8,12 @@ path="res://.godot/imported/winner.ogg-9f02431168433b860784ef2b811ec450.oggvorbi
 [deps]
 
 source_file="res://audio/winner.ogg"
-dest_files=PackedStringArray("res://.godot/imported/winner.ogg-9f02431168433b860784ef2b811ec450.oggvorbisstr")
+dest_files=["res://.godot/imported/winner.ogg-9f02431168433b860784ef2b811ec450.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

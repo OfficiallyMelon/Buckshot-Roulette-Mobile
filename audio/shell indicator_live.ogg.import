@@ -8,8 +8,12 @@ path="res://.godot/imported/shell indicator_live.ogg-6cf3bacddf4b6279dc05f0a0b6e
 [deps]
 
 source_file="res://audio/shell indicator_live.ogg"
-dest_files=PackedStringArray("res://.godot/imported/shell indicator_live.ogg-6cf3bacddf4b6279dc05f0a0b6ed75f2.oggvorbisstr")
+dest_files=["res://.godot/imported/shell indicator_live.ogg-6cf3bacddf4b6279dc05f0a0b6ed75f2.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

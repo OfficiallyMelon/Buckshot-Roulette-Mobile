@@ -8,8 +8,12 @@ path="res://.godot/imported/dealer check handcuffs.ogg-59d21671306112dd4cc06f9be
 [deps]
 
 source_file="res://audio/dealer check handcuffs.ogg"
-dest_files=PackedStringArray("res://.godot/imported/dealer check handcuffs.ogg-59d21671306112dd4cc06f9beab2267b.oggvorbisstr")
+dest_files=["res://.godot/imported/dealer check handcuffs.ogg-59d21671306112dd4cc06f9beab2267b.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

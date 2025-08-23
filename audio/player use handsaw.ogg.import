@@ -8,8 +8,12 @@ path="res://.godot/imported/player use handsaw.ogg-59d7e9b03e2ccd28f03963e6e2560
 [deps]
 
 source_file="res://audio/player use handsaw.ogg"
-dest_files=PackedStringArray("res://.godot/imported/player use handsaw.ogg-59d7e9b03e2ccd28f03963e6e2560744.oggvorbisstr")
+dest_files=["res://.godot/imported/player use handsaw.ogg-59d7e9b03e2ccd28f03963e6e2560744.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

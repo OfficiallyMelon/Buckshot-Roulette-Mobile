@@ -8,8 +8,12 @@ path="res://.godot/imported/grab item4.ogg-540fc00784c79a6e528e9c893bfe712b.oggv
 [deps]
 
 source_file="res://audio/grab item4.ogg"
-dest_files=PackedStringArray("res://.godot/imported/grab item4.ogg-540fc00784c79a6e528e9c893bfe712b.oggvorbisstr")
+dest_files=["res://.godot/imported/grab item4.ogg-540fc00784c79a6e528e9c893bfe712b.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

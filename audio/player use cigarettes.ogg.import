@@ -8,8 +8,12 @@ path="res://.godot/imported/player use cigarettes.ogg-70840ca3d1e5c34996557d2c30
 [deps]
 
 source_file="res://audio/player use cigarettes.ogg"
-dest_files=PackedStringArray("res://.godot/imported/player use cigarettes.ogg-70840ca3d1e5c34996557d2c30d7ac28.oggvorbisstr")
+dest_files=["res://.godot/imported/player use cigarettes.ogg-70840ca3d1e5c34996557d2c30d7ac28.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

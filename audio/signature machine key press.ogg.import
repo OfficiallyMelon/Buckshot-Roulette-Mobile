@@ -8,8 +8,12 @@ path="res://.godot/imported/signature machine key press.ogg-f95e401c4bd0e59723fa
 [deps]
 
 source_file="res://audio/signature machine key press.ogg"
-dest_files=PackedStringArray("res://.godot/imported/signature machine key press.ogg-f95e401c4bd0e59723fa50ed60b11021.oggvorbisstr")
+dest_files=["res://.godot/imported/signature machine key press.ogg-f95e401c4bd0e59723fa50ed60b11021.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

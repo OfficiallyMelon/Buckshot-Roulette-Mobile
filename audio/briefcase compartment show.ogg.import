@@ -8,8 +8,12 @@ path="res://.godot/imported/briefcase compartment show.ogg-97d79957f1fdac08c4f97
 [deps]
 
 source_file="res://audio/briefcase compartment show.ogg"
-dest_files=PackedStringArray("res://.godot/imported/briefcase compartment show.ogg-97d79957f1fdac08c4f97379b0aa9509.oggvorbisstr")
+dest_files=["res://.godot/imported/briefcase compartment show.ogg-97d79957f1fdac08c4f97379b0aa9509.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

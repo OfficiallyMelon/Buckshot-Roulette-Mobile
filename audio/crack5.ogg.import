@@ -8,8 +8,12 @@ path="res://.godot/imported/crack5.ogg-7053fdf90ef48df5fe7fc69ff0d8b529.oggvorbi
 [deps]
 
 source_file="res://audio/crack5.ogg"
-dest_files=PackedStringArray("res://.godot/imported/crack5.ogg-7053fdf90ef48df5fe7fc69ff0d8b529.oggvorbisstr")
+dest_files=["res://.godot/imported/crack5.ogg-7053fdf90ef48df5fe7fc69ff0d8b529.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -8,8 +8,12 @@ path="res://.godot/imported/crt_volta melody hide.ogg-55997cbae6fe1d519b866de07b
 [deps]
 
 source_file="res://audio/crt_volta melody hide.ogg"
-dest_files=PackedStringArray("res://.godot/imported/crt_volta melody hide.ogg-55997cbae6fe1d519b866de07b04c4ef.oggvorbisstr")
+dest_files=["res://.godot/imported/crt_volta melody hide.ogg-55997cbae6fe1d519b866de07b04c4ef.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

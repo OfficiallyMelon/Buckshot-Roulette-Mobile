@@ -8,8 +8,12 @@ path="res://.godot/imported/briefcase latch1.ogg-847a990bcda57dbfb02786d9f8cb08d
 [deps]
 
 source_file="res://audio/briefcase latch1.ogg"
-dest_files=PackedStringArray("res://.godot/imported/briefcase latch1.ogg-847a990bcda57dbfb02786d9f8cb08d7.oggvorbisstr")
+dest_files=["res://.godot/imported/briefcase latch1.ogg-847a990bcda57dbfb02786d9f8cb08d7.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

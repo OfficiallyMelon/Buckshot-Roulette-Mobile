@@ -8,8 +8,12 @@ path="res://.godot/imported/error vol3.ogg-c9235774de3f061388cf856dd46f8745.oggv
 [deps]
 
 source_file="res://audio/error vol3.ogg"
-dest_files=PackedStringArray("res://.godot/imported/error vol3.ogg-c9235774de3f061388cf856dd46f8745.oggvorbisstr")
+dest_files=["res://.godot/imported/error vol3.ogg-c9235774de3f061388cf856dd46f8745.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

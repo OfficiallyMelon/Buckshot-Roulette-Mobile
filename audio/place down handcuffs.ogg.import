@@ -8,8 +8,12 @@ path="res://.godot/imported/place down handcuffs.ogg-5e08bf675227b5367e4d8c50a21
 [deps]
 
 source_file="res://audio/place down handcuffs.ogg"
-dest_files=PackedStringArray("res://.godot/imported/place down handcuffs.ogg-5e08bf675227b5367e4d8c50a210cb4d.oggvorbisstr")
+dest_files=["res://.godot/imported/place down handcuffs.ogg-5e08bf675227b5367e4d8c50a210cb4d.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,6 +1,6 @@
 extends Node
 
-var appid : int = 2835570
+var appid: int = 2835570
 
 func _ready():
 	process_priority = 1000
@@ -8,21 +8,17 @@ func _ready():
 	_initialize_steam()
 
 func _process(_delta: float) -> void:
-	if _should_use_steam():
-		Steam.run_callbacks()
+	if Engine.has_singleton("Steam"):
+		var steam = Engine.get_singleton("Steam")
+		steam.run_callbacks()
 
 func _initialize_steam() -> void:
-	if not _should_use_steam():
-		print("Skipping Steam initialization (unsupported platform).")
+	if not Engine.has_singleton("Steam"):
+		print("Skipping Steam initialization (Steam not available on this platform).")
 		return
 
+	var steam = Engine.get_singleton("Steam")
 	OS.set_environment("SteamAppId", str(appid))
 	OS.set_environment("SteamGameId", str(appid))
-
-	var init: Dictionary = Steam.steamInit(false)
+	var init: Dictionary = steam.steamInit(false)
 	print("Steam init: ", str(init))
-
-func _should_use_steam() -> bool:
-	var name := OS.get_name()
-	# Steam SDK is only valid on Windows/Linux (not macOS, iOS, Android)
-	return name == "Windows" or name == "Linux" or name == "UWP"

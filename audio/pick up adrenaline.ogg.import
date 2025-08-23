@@ -8,8 +8,12 @@ path="res://.godot/imported/pick up adrenaline.ogg-3f970d14095e838d69be3b22f3518
 [deps]
 
 source_file="res://audio/pick up adrenaline.ogg"
-dest_files=PackedStringArray("res://.godot/imported/pick up adrenaline.ogg-3f970d14095e838d69be3b22f3518e15.oggvorbisstr")
+dest_files=["res://.godot/imported/pick up adrenaline.ogg-3f970d14095e838d69be3b22f3518e15.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

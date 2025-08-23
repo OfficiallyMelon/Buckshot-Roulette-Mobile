@@ -8,8 +8,12 @@ path="res://.godot/imported/music main_you are presented.ogg-97c7acb51b2ec8a03b3
 [deps]
 
 source_file="res://audio/music/music main_you are presented.ogg"
-dest_files=PackedStringArray("res://.godot/imported/music main_you are presented.ogg-97c7acb51b2ec8a03b3102c9e33d2230.oggvorbisstr")
+dest_files=["res://.godot/imported/music main_you are presented.ogg-97c7acb51b2ec8a03b3102c9e33d2230.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

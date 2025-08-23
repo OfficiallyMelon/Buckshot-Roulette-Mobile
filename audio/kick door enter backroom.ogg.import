@@ -8,8 +8,12 @@ path="res://.godot/imported/kick door enter backroom.ogg-c94851da37ba7dc387a6922
 [deps]
 
 source_file="res://audio/kick door enter backroom.ogg"
-dest_files=PackedStringArray("res://.godot/imported/kick door enter backroom.ogg-c94851da37ba7dc387a69224e7d581a9.oggvorbisstr")
+dest_files=["res://.godot/imported/kick door enter backroom.ogg-c94851da37ba7dc387a69224e7d581a9.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

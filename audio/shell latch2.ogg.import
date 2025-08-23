@@ -8,8 +8,12 @@ path="res://.godot/imported/shell latch2.ogg-f14f519c34f0e69746a7f6eb7d9150ff.og
 [deps]
 
 source_file="res://audio/shell latch2.ogg"
-dest_files=PackedStringArray("res://.godot/imported/shell latch2.ogg-f14f519c34f0e69746a7f6eb7d9150ff.oggvorbisstr")
+dest_files=["res://.godot/imported/shell latch2.ogg-f14f519c34f0e69746a7f6eb7d9150ff.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

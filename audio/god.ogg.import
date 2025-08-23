@@ -8,8 +8,12 @@ path="res://.godot/imported/god.ogg-d067a857b0a9db7d593f7bbac5552f5b.oggvorbisst
 [deps]
 
 source_file="res://audio/god.ogg"
-dest_files=PackedStringArray("res://.godot/imported/god.ogg-d067a857b0a9db7d593f7bbac5552f5b.oggvorbisstr")
+dest_files=["res://.godot/imported/god.ogg-d067a857b0a9db7d593f7bbac5552f5b.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

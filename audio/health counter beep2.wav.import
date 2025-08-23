@@ -8,9 +8,17 @@ path="res://.godot/imported/health counter beep2.wav-5241d040ca7e72f2847a29f2d20
 [deps]
 
 source_file="res://audio/health counter beep2.wav"
-dest_files=PackedStringArray("res://.godot/imported/health counter beep2.wav-5241d040ca7e72f2847a29f2d2060d27.sample")
+dest_files=["res://.godot/imported/health counter beep2.wav-5241d040ca7e72f2847a29f2d2060d27.sample"]
 
 [params]
 
-dummy_value_ignore_me=0
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

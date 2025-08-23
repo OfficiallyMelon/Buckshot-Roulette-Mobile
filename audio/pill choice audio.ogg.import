@@ -8,8 +8,12 @@ path="res://.godot/imported/pill choice audio.ogg-9f607619e032eaa29d40a6264cb4a0
 [deps]
 
 source_file="res://audio/pill choice audio.ogg"
-dest_files=PackedStringArray("res://.godot/imported/pill choice audio.ogg-9f607619e032eaa29d40a6264cb4a0c4.oggvorbisstr")
+dest_files=["res://.godot/imported/pill choice audio.ogg-9f607619e032eaa29d40a6264cb4a0c4.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

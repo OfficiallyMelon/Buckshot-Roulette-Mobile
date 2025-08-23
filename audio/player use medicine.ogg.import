@@ -8,8 +8,12 @@ path="res://.godot/imported/player use medicine.ogg-b77c9e524a256e2b883f42cb24de
 [deps]
 
 source_file="res://audio/player use medicine.ogg"
-dest_files=PackedStringArray("res://.godot/imported/player use medicine.ogg-b77c9e524a256e2b883f42cb24deb407.oggvorbisstr")
+dest_files=["res://.godot/imported/player use medicine.ogg-b77c9e524a256e2b883f42cb24deb407.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

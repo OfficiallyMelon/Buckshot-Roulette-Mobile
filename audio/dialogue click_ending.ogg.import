@@ -8,8 +8,12 @@ path="res://.godot/imported/dialogue click_ending.ogg-b90d793bc35dee8a52ba2743c9
 [deps]
 
 source_file="res://audio/dialogue click_ending.ogg"
-dest_files=PackedStringArray("res://.godot/imported/dialogue click_ending.ogg-b90d793bc35dee8a52ba2743c98bc801.oggvorbisstr")
+dest_files=["res://.godot/imported/dialogue click_ending.ogg-b90d793bc35dee8a52ba2743c98bc801.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

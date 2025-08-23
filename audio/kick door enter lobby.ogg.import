@@ -8,8 +8,12 @@ path="res://.godot/imported/kick door enter lobby.ogg-92ad8d6e7e05484d2ddae74b38
 [deps]
 
 source_file="res://audio/kick door enter lobby.ogg"
-dest_files=PackedStringArray("res://.godot/imported/kick door enter lobby.ogg-92ad8d6e7e05484d2ddae74b380b2754.oggvorbisstr")
+dest_files=["res://.godot/imported/kick door enter lobby.ogg-92ad8d6e7e05484d2ddae74b380b2754.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

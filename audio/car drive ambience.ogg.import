@@ -8,8 +8,12 @@ path="res://.godot/imported/car drive ambience.ogg-3faaff5f538e7d129a41d45f8d01a
 [deps]
 
 source_file="res://audio/car drive ambience.ogg"
-dest_files=PackedStringArray("res://.godot/imported/car drive ambience.ogg-3faaff5f538e7d129a41d45f8d01a771.oggvorbisstr")
+dest_files=["res://.godot/imported/car drive ambience.ogg-3faaff5f538e7d129a41d45f8d01a771.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

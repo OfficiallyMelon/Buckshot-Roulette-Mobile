@@ -8,8 +8,12 @@ path="res://.godot/imported/music_room vol2.ogg-cf674bed7934ff4f8a050e50725b65f9
 [deps]
 
 source_file="res://audio/music_room vol2.ogg"
-dest_files=PackedStringArray("res://.godot/imported/music_room vol2.ogg-cf674bed7934ff4f8a050e50725b65f9.oggvorbisstr")
+dest_files=["res://.godot/imported/music_room vol2.ogg-cf674bed7934ff4f8a050e50725b65f9.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

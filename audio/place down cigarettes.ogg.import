@@ -8,8 +8,12 @@ path="res://.godot/imported/place down cigarettes.ogg-fb253056ce53b8eda502467c1c
 [deps]
 
 source_file="res://audio/place down cigarettes.ogg"
-dest_files=PackedStringArray("res://.godot/imported/place down cigarettes.ogg-fb253056ce53b8eda502467c1cec42b6.oggvorbisstr")
+dest_files=["res://.godot/imported/place down cigarettes.ogg-fb253056ce53b8eda502467c1cec42b6.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

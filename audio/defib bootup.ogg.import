@@ -8,8 +8,12 @@ path="res://.godot/imported/defib bootup.ogg-4fe64b8112bf5517b5016f3638c74246.og
 [deps]
 
 source_file="res://audio/defib bootup.ogg"
-dest_files=PackedStringArray("res://.godot/imported/defib bootup.ogg-4fe64b8112bf5517b5016f3638c74246.oggvorbisstr")
+dest_files=["res://.godot/imported/defib bootup.ogg-4fe64b8112bf5517b5016f3638c74246.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

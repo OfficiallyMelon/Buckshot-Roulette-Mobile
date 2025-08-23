@@ -8,8 +8,12 @@ path="res://.godot/imported/signature machine shutdown1.ogg-12612896ada7d112cf78
 [deps]
 
 source_file="res://audio/signature machine shutdown1.ogg"
-dest_files=PackedStringArray("res://.godot/imported/signature machine shutdown1.ogg-12612896ada7d112cf78ad7f0f1576c8.oggvorbisstr")
+dest_files=["res://.godot/imported/signature machine shutdown1.ogg-12612896ada7d112cf78ad7f0f1576c8.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

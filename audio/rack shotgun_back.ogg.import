@@ -8,8 +8,12 @@ path="res://.godot/imported/rack shotgun_back.ogg-bbb13004da385205bcf65a8d795e57
 [deps]
 
 source_file="res://audio/rack shotgun_back.ogg"
-dest_files=PackedStringArray("res://.godot/imported/rack shotgun_back.ogg-bbb13004da385205bcf65a8d795e5766.oggvorbisstr")
+dest_files=["res://.godot/imported/rack shotgun_back.ogg-bbb13004da385205bcf65a8d795e5766.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

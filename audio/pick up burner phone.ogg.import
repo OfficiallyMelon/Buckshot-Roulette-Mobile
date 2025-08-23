@@ -8,8 +8,12 @@ path="res://.godot/imported/pick up burner phone.ogg-438da456106c50246dc3fefed2d
 [deps]
 
 source_file="res://audio/pick up burner phone.ogg"
-dest_files=PackedStringArray("res://.godot/imported/pick up burner phone.ogg-438da456106c50246dc3fefed2d63115.oggvorbisstr")
+dest_files=["res://.godot/imported/pick up burner phone.ogg-438da456106c50246dc3fefed2d63115.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

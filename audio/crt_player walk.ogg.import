@@ -8,8 +8,12 @@ path="res://.godot/imported/crt_player walk.ogg-2987496c3cd1eba8a0af8c5b6378d576
 [deps]
 
 source_file="res://audio/crt_player walk.ogg"
-dest_files=PackedStringArray("res://.godot/imported/crt_player walk.ogg-2987496c3cd1eba8a0af8c5b6378d576.oggvorbisstr")
+dest_files=["res://.godot/imported/crt_player walk.ogg-2987496c3cd1eba8a0af8c5b6378d576.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -8,8 +8,12 @@ path="res://.godot/imported/place down medicine.ogg-e255f34b7aaf93b791dbb8d7e519
 [deps]
 
 source_file="res://audio/place down medicine.ogg"
-dest_files=PackedStringArray("res://.godot/imported/place down medicine.ogg-e255f34b7aaf93b791dbb8d7e5194935.oggvorbisstr")
+dest_files=["res://.godot/imported/place down medicine.ogg-e255f34b7aaf93b791dbb8d7e5194935.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

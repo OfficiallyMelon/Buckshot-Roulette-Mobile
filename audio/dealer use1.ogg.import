@@ -8,8 +8,12 @@ path="res://.godot/imported/dealer use1.ogg-439f48d1d93bc7ed5949e0c2b8db93d3.ogg
 [deps]
 
 source_file="res://audio/dealer use1.ogg"
-dest_files=PackedStringArray("res://.godot/imported/dealer use1.ogg-439f48d1d93bc7ed5949e0c2b8db93d3.oggvorbisstr")
+dest_files=["res://.godot/imported/dealer use1.ogg-439f48d1d93bc7ed5949e0c2b8db93d3.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -8,8 +8,12 @@ path="res://.godot/imported/defib blade open.ogg-ebc0d8f7a98b9c1cd514ca417b23ccb
 [deps]
 
 source_file="res://audio/defib blade open.ogg"
-dest_files=PackedStringArray("res://.godot/imported/defib blade open.ogg-ebc0d8f7a98b9c1cd514ca417b23ccb1.oggvorbisstr")
+dest_files=["res://.godot/imported/defib blade open.ogg-ebc0d8f7a98b9c1cd514ca417b23ccb1.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

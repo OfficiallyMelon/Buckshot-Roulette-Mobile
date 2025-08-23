@@ -8,8 +8,12 @@ path="res://.godot/imported/player use beer.ogg-8b61954b1e2b6a8331bf638753a6a8ce
 [deps]
 
 source_file="res://audio/player use beer.ogg"
-dest_files=PackedStringArray("res://.godot/imported/player use beer.ogg-8b61954b1e2b6a8331bf638753a6a8ce.oggvorbisstr")
+dest_files=["res://.godot/imported/player use beer.ogg-8b61954b1e2b6a8331bf638753a6a8ce.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -8,8 +8,12 @@ path="res://.godot/imported/health counter error4.ogg-f2c0896d5faef9fd1e0310a20e
 [deps]
 
 source_file="res://audio/health counter error4.ogg"
-dest_files=PackedStringArray("res://.godot/imported/health counter error4.ogg-f2c0896d5faef9fd1e0310a20efbc27d.oggvorbisstr")
+dest_files=["res://.godot/imported/health counter error4.ogg-f2c0896d5faef9fd1e0310a20efbc27d.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

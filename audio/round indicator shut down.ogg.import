@@ -8,8 +8,12 @@ path="res://.godot/imported/round indicator shut down.ogg-5ae3fe836072c2be25f509
 [deps]
 
 source_file="res://audio/round indicator shut down.ogg"
-dest_files=PackedStringArray("res://.godot/imported/round indicator shut down.ogg-5ae3fe836072c2be25f5098c4e191e4b.oggvorbisstr")
+dest_files=["res://.godot/imported/round indicator shut down.ogg-5ae3fe836072c2be25f5098c4e191e4b.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

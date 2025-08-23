@@ -8,8 +8,12 @@ path="res://.godot/imported/dealer use medicine.ogg-76ce61595c4e6f722d6df3606dae
 [deps]
 
 source_file="res://audio/dealer use medicine.ogg"
-dest_files=PackedStringArray("res://.godot/imported/dealer use medicine.ogg-76ce61595c4e6f722d6df3606dae0983.oggvorbisstr")
+dest_files=["res://.godot/imported/dealer use medicine.ogg-76ce61595c4e6f722d6df3606dae0983.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

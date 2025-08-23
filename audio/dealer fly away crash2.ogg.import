@@ -8,8 +8,12 @@ path="res://.godot/imported/dealer fly away crash2.ogg-38a038bafee1beceb43eb3346
 [deps]
 
 source_file="res://audio/dealer fly away crash2.ogg"
-dest_files=PackedStringArray("res://.godot/imported/dealer fly away crash2.ogg-38a038bafee1beceb43eb334611d1e8a.oggvorbisstr")
+dest_files=["res://.godot/imported/dealer fly away crash2.ogg-38a038bafee1beceb43eb334611d1e8a.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

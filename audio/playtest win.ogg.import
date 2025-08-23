@@ -8,8 +8,12 @@ path="res://.godot/imported/playtest win.ogg-839483857780de666ed7b41488dbc54e.og
 [deps]
 
 source_file="res://audio/playtest win.ogg"
-dest_files=PackedStringArray("res://.godot/imported/playtest win.ogg-839483857780de666ed7b41488dbc54e.oggvorbisstr")
+dest_files=["res://.godot/imported/playtest win.ogg-839483857780de666ed7b41488dbc54e.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

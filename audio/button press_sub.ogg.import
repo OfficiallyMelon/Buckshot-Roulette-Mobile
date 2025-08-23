@@ -8,8 +8,12 @@ path="res://.godot/imported/button press_sub.ogg-089b61c034c651196f168fe60ec491d
 [deps]
 
 source_file="res://audio/button press_sub.ogg"
-dest_files=PackedStringArray("res://.godot/imported/button press_sub.ogg-089b61c034c651196f168fe60ec491dc.oggvorbisstr")
+dest_files=["res://.godot/imported/button press_sub.ogg-089b61c034c651196f168fe60ec491dc.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

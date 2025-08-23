@@ -8,8 +8,12 @@ path="res://.godot/imported/music main_error.ogg-b7e98cca74a7f21c22971f17eefcdc7
 [deps]
 
 source_file="res://audio/music/music main_error.ogg"
-dest_files=PackedStringArray("res://.godot/imported/music main_error.ogg-b7e98cca74a7f21c22971f17eefcdc7d.oggvorbisstr")
+dest_files=["res://.godot/imported/music main_error.ogg-b7e98cca74a7f21c22971f17eefcdc7d.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

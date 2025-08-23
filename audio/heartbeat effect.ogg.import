@@ -8,8 +8,12 @@ path="res://.godot/imported/heartbeat effect.ogg-5ef5c8b0e5530e2315d05e703182e4f
 [deps]
 
 source_file="res://audio/heartbeat effect.ogg"
-dest_files=PackedStringArray("res://.godot/imported/heartbeat effect.ogg-5ef5c8b0e5530e2315d05e703182e4f7.oggvorbisstr")
+dest_files=["res://.godot/imported/heartbeat effect.ogg-5ef5c8b0e5530e2315d05e703182e4f7.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

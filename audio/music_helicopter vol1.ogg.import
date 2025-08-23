@@ -8,8 +8,12 @@ path="res://.godot/imported/music_helicopter vol1.ogg-8780a85344376ffede3b9eab6a
 [deps]
 
 source_file="res://audio/music_helicopter vol1.ogg"
-dest_files=PackedStringArray("res://.godot/imported/music_helicopter vol1.ogg-8780a85344376ffede3b9eab6a9b086e.oggvorbisstr")
+dest_files=["res://.godot/imported/music_helicopter vol1.ogg-8780a85344376ffede3b9eab6a9b086e.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

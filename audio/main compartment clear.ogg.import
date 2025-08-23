@@ -8,8 +8,12 @@ path="res://.godot/imported/main compartment clear.ogg-b22b50fdc7e67b7a76d174378
 [deps]
 
 source_file="res://audio/main compartment clear.ogg"
-dest_files=PackedStringArray("res://.godot/imported/main compartment clear.ogg-b22b50fdc7e67b7a76d1743788282243.oggvorbisstr")
+dest_files=["res://.godot/imported/main compartment clear.ogg-b22b50fdc7e67b7a76d1743788282243.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

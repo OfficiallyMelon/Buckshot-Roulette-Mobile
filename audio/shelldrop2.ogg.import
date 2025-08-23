@@ -8,8 +8,12 @@ path="res://.godot/imported/shelldrop2.ogg-ee012b45aed555ee053bc4c1dda48b07.oggv
 [deps]
 
 source_file="res://audio/shelldrop2.ogg"
-dest_files=PackedStringArray("res://.godot/imported/shelldrop2.ogg-ee012b45aed555ee053bc4c1dda48b07.oggvorbisstr")
+dest_files=["res://.godot/imported/shelldrop2.ogg-ee012b45aed555ee053bc4c1dda48b07.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

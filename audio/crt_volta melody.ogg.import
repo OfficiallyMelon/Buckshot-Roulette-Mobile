@@ -8,8 +8,12 @@ path="res://.godot/imported/crt_volta melody.ogg-19517727caf09241c1aeb852a156cfd
 [deps]
 
 source_file="res://audio/crt_volta melody.ogg"
-dest_files=PackedStringArray("res://.godot/imported/crt_volta melody.ogg-19517727caf09241c1aeb852a156cfd5.oggvorbisstr")
+dest_files=["res://.godot/imported/crt_volta melody.ogg-19517727caf09241c1aeb852a156cfd5.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

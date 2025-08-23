@@ -8,8 +8,12 @@ path="res://.godot/imported/health counter confirmation2.ogg-bb3bdb281f15a869bd4
 [deps]
 
 source_file="res://audio/health counter confirmation2.ogg"
-dest_files=PackedStringArray("res://.godot/imported/health counter confirmation2.ogg-bb3bdb281f15a869bd4b3f5740d733c2.oggvorbisstr")
+dest_files=["res://.godot/imported/health counter confirmation2.ogg-bb3bdb281f15a869bd4b3f5740d733c2.oggvorbisstr"]
 
 [params]
 
-dummy_value_ignore_me=0
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
