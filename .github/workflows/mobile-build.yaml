@@ -45,24 +45,11 @@ jobs:
           unzip -q templates.tpz -d templates_unpacked
           cp -R templates_unpacked/templates/* "${TEMPLATES_DIR}/"
 
-      - name: Export iOS Xcode project
+      - name: Export iOS Xcode project (project only)
         run: |
           set -euxo pipefail
           mkdir -p "${EXPORT_DIR_IOS}"
           tools/godot/Godot --headless --path . --export-release "${EXPORT_PRESET_IOS}" "${EXPORT_DIR_IOS}"
-
-      - name: Disable code signing in Xcode project
-        run: |
-          set -euxo pipefail
-          PROJ=$(ls "${EXPORT_DIR_IOS}"/*.xcodeproj | head -n1)
-          PBX="${PROJ}/project.pbxproj"
-          # Remove hard-coded code signing identities
-          sed -i.bak '/CODE_SIGN_IDENTITY/d' "${PBX}"
-          sed -i.bak '/PROVISIONING_PROFILE_SPECIFIER/d' "${PBX}"
-          sed -i.bak '/DEVELOPMENT_TEAM/d' "${PBX}"
-          # Force signing off
-          echo 'CODE_SIGNING_ALLOWED = NO;' >> "${PBX}"
-          echo 'CODE_SIGNING_REQUIRED = NO;' >> "${PBX}"
 
       - name: Set iOS deployment target
         run: |
@@ -79,7 +66,7 @@ jobs:
           xcodebuild -project "${PROJ}" -scheme "${SCHEME}" -configuration Release -archivePath "${ARCHIVE_PATH}" -destination 'generic/platform=iOS' CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO clean archive | xcpretty || true
           test -d "${ARCHIVE_PATH}"
 
-      - name: Create .ipa
+      - name: Create .ipa (unsigned)
         run: |
           set -euxo pipefail
           APP_DIR="${ARCHIVE_PATH}/Products/Applications"
