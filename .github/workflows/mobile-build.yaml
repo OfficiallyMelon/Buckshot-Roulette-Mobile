@@ -76,7 +76,7 @@ jobs:
       - name: Build .xcarchive (unsigned)
         run: |
           set -euxo pipefail
-          PROJ=$(ls "${EXPORT_DIR_IOS}"/*.xcodeproj | head -n1)
+          PROJ=$(ls "${EXPORT_DIR_IOS}/../"/*.xcodeproj | head -n1)
           SCHEME=$(/usr/libexec/PlistBuddy -c "Print :objects" "${PROJ}/project.pbxproj" | sed -n '/isa = PBXNativeTarget/,/}/p' | sed -n 's/.*name = \(.*\);.*/\1/p' | head -n1)
           xcodebuild -project "${PROJ}" -scheme "${SCHEME}" -configuration Release -archivePath "${ARCHIVE_PATH}" -destination 'generic/platform=iOS' CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO clean archive | xcpretty || true
           test -d "${ARCHIVE_PATH}"
