@@ -11,3 +11,4 @@ Buckshot Roulette is a tense, luck-based game that turns Russian Roulette into a
 ### Disclaimer
 
 This is a fan-made project. All rights to Buckshot Roulette belong to the original developer. This repo exists for educational purposes and to make the game playable on iOS devices.
+This project is based on [buckshot-decomp-private](https://github.com/uncreativeCultist/buckshot-decomp-private) by [@uncreativeCultist](https://github.com/uncreativeCultist) and adapted to run smoothly on iOS devices.
