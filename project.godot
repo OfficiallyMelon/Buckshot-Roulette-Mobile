@@ -32,7 +32,6 @@ file_logging/enable_file_logging=true
 window/size/viewport_width=960
 window/size/viewport_height=540
 window/stretch/mode="viewport"
-window/stretch/aspect="expand"
 window/handheld/orientation=6
 mouse_cursor/custom_image="res://misc/cursor xp_point.png"
 mouse_cursor/custom_image_hotspot=Vector2(9, 0)
@@ -438,6 +437,7 @@ locale/locale_filter_mode=0
 
 [rendering]
 
+renderer/rendering_method.mobile="forward_plus"
 textures/vram_compression/import_etc2_astc=true
 shading/overrides/force_vertex_shading.mobile=false
 shading/overrides/force_lambert_over_burley.mobile=false
