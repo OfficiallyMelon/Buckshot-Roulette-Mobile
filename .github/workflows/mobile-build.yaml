@@ -54,7 +54,7 @@ jobs:
       - name: Set iOS deployment target
         run: |
           set -euxo pipefail
-          PROJ="$(/usr/bin/find "../${EXPORT_DIR_IOS}" -maxdepth 4 -type d -name '*.xcodeproj' -print -quit)"
+          PROJ="$(/usr/bin/find "${EXPORT_DIR_IOS}../" -maxdepth 4 -type d -name '*.xcodeproj' -print -quit)"
           if [[ -z "$PROJ" ]]; then
             echo "No .xcodeproj found under ${EXPORT_DIR_IOS}. Contents:"
             find "${EXPORT_DIR_IOS}" -maxdepth 4 -print || true
