@@ -51,6 +51,19 @@ jobs:
           mkdir -p "${EXPORT_DIR_IOS}"
           tools/godot/Godot --headless --path . --export-release "${EXPORT_PRESET_IOS}" "${EXPORT_DIR_IOS}"
 
+      - name: Disable code signing in Xcode project
+        run: |
+          set -euxo pipefail
+          PROJ=$(ls "${EXPORT_DIR_IOS}"/*.xcodeproj | head -n1)
+          PBX="${PROJ}/project.pbxproj"
+          # Remove hard-coded code signing identities
+          sed -i.bak '/CODE_SIGN_IDENTITY/d' "${PBX}"
+          sed -i.bak '/PROVISIONING_PROFILE_SPECIFIER/d' "${PBX}"
+          sed -i.bak '/DEVELOPMENT_TEAM/d' "${PBX}"
+          # Force signing off
+          echo 'CODE_SIGNING_ALLOWED = NO;' >> "${PBX}"
+          echo 'CODE_SIGNING_REQUIRED = NO;' >> "${PBX}"
+
       - name: Set iOS deployment target
         run: |
           set -euxo pipefail
