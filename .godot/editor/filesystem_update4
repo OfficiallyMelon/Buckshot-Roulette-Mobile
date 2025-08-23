@@ -1,5 +1,0 @@
-res://scenes/menu.tscn
-res://scripts/ButtonClass.gd
-res://scripts/MenuManager.gd
-res://scripts/MouseRaycast.gd
-res://scripts/Steam.gd
