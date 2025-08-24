@@ -39,7 +39,6 @@ func _ready():
 	buttons[16].connect("is_pressed", RebindControls)
 	buttons[17].connect("is_pressed", ReturnToLastScreen)
 	buttons[18].connect("is_pressed", ResetControls)
-	buttons[19].connect("is_pressed", DiscordLink)
 	
 	buttons_options[0].connect("is_pressed", IncreaseVol)
 	buttons_options[1].connect("is_pressed", DecreaseVol)
@@ -170,9 +169,6 @@ func Exit():
 func ResetControls():
 	optionmanager.ResetControls()
 	ResetButtons()
-
-func DiscordLink():
-	OS.shell_open("https://lilliepad.xyz/")
 func RebindControls():
 	Show("rebind controls")
 	ResetButtons()

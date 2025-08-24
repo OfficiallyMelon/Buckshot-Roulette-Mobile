@@ -438,6 +438,7 @@ locale/locale_filter_mode=0
 [rendering]
 
 renderer/rendering_method.mobile="forward_plus"
+renderer/rendering_method.web="forward_plus"
 textures/vram_compression/import_etc2_astc=true
 shading/overrides/force_vertex_shading.mobile=false
 shading/overrides/force_lambert_over_burley.mobile=false
