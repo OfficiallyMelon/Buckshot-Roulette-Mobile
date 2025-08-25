@@ -437,9 +437,28 @@ locale/locale_filter_mode=0
 
 [rendering]
 
+occlusion_culling/bvh_build_quality=1
 renderer/rendering_method.mobile="forward_plus"
 renderer/rendering_method.web="forward_plus"
 textures/vram_compression/import_etc2_astc=true
+textures/webp_compression/compression_method=4
+lights_and_shadows/directional_shadow/size.mobile=1024
+lights_and_shadows/directional_shadow/soft_shadow_filter_quality=0
+lights_and_shadows/positional_shadow/soft_shadow_filter_quality=0
+reflections/sky_reflections/ggx_samples=16
+reflections/reflection_atlas/reflection_size=128
+reflections/reflection_atlas/reflection_count=32
 shading/overrides/force_vertex_shading.mobile=false
+shading/overrides/force_lambert_over_burley=true
 shading/overrides/force_lambert_over_burley.mobile=false
-global_illumination/sdfgi/frames_to_update_lights=4
+environment/ssao/quality=0
+environment/ssil/quality=0
+environment/glow/upscale_mode=0
+environment/screen_space_reflection/roughness_quality=0
+environment/subsurface_scattering/subsurface_scattering_quality=0
+global_illumination/sdfgi/probe_ray_count=0
+environment/volumetric_fog/volume_size=16
+environment/volumetric_fog/volume_depth=16
+environment/volumetric_fog/use_filter=0
+occlusion_culling/use_occlusion_culling=true
+lights_and_shadows/positional_shadow/atlas_size.mobile=1024
