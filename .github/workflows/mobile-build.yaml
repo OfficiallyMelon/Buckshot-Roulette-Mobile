@@ -48,17 +48,27 @@ jobs:
         run: |
           COMMIT_MSG="${{ github.event.head_commit.message }}"
           echo "commit=$COMMIT_MSG"
+
           if [[ "$COMMIT_MSG" =~ ^RELEASE[[:space:]]*\| ]]; then
             TAG=$(echo "$COMMIT_MSG" | sed -n 's/.*TAG[: ]\{0,1\}\([vV][0-9.]*\).*/\1/p' | head -1)
             NAME=$(echo "$COMMIT_MSG" | cut -d"|" -f3- | xargs)
-            DESC="${{ github.event.head_commit.message }}"
+
+            # Use the full commit message (with body) as release description
+            DESC="${COMMIT_MSG}"
+
             echo "release=true" >> $GITHUB_OUTPUT
-            echo "tag=$TAG" >> $GITHUB_OUTPUT
-            echo "name=$NAME" >> $GITHUB_OUTPUT
-            echo "desc=$DESC" >> $GITHUB_OUTPUT
+            echo "tag=${TAG}" >> $GITHUB_OUTPUT
+            echo "name=${NAME}" >> $GITHUB_OUTPUT
+
+            {
+              echo "desc<<EOF"
+              echo "$DESC"
+              echo "EOF"
+            } >> $GITHUB_OUTPUT
           else
             echo "release=false" >> $GITHUB_OUTPUT
           fi
+
 
       - name: Build iOS + Android (Performance + Quality)
         run: |
