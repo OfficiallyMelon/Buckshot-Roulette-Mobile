@@ -1,5 +1,8 @@
 name: Release Godot (iOS + Android)
 
+permissions:
+  contents: write
+  
 on:
   workflow_dispatch:
     inputs:
