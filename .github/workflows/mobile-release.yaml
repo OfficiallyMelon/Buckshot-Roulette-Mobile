@@ -1,4 +1,4 @@
-name: Build Godot (iOS + Android)
+name: Release Godot (iOS + Android)
 
 on:
   workflow_dispatch:
