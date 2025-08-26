@@ -113,7 +113,7 @@ jobs:
           if-no-files-found: error
           retention-days: 14
 
-      - name: Upload Release (if release)
+      - name: Upload Release
         if: steps.rel.outputs.release == 'true'
         uses: softprops/action-gh-release@v2
         with:
