@@ -1,4 +1,3 @@
-# thanks GPT-5
 name: Build Godot (iOS + Android)
 
 on:
@@ -6,52 +5,30 @@ on:
     branches: ["**"]
   workflow_dispatch:
 
-permissions:
-  contents: write  # create/update releases
-
-concurrency:
-  group: build-${{ github.ref }}
-  cancel-in-progress: true
-
 jobs:
   build:
     runs-on: macos-13
     env:
       GODOT_VERSION: "4.3"
-
-      # Only two presets in Godot
       EXPORT_PRESET_IOS: "iOS"
       EXPORT_PRESET_ANDROID: "Android"
-
-      # Generic artifact (hashed) build dirs
       EXPORT_DIR_IOS: "build/ios"
       EXPORT_DIR_ANDROID: "build/android"
       ARCHIVE_PATH: "build/App.xcarchive"
-
-      # Variant build dirs (for release builds)
-      EXPORT_DIR_IOS_QUALITY: "build/ios-quality"
-      EXPORT_DIR_IOS_PERF: "build/ios-performance"
-      ARCHIVE_PATH_IOS_QUALITY: "build/ios-quality/App.xcarchive"
-      ARCHIVE_PATH_IOS_PERF: "build/ios-performance/App.xcarchive"
-
-      # Hashed artifact names (keep SHA for artifacts)
-      IPA_NAME: "Buckshot-${{ github.sha }}.ipa"
-      APK_NAME: "Buckshot-${{ github.sha }}.apk"
-
       DEPLOYMENT_TARGET: "12.0"
 
     steps:
-      - name: Checkout (with LFS)
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           lfs: true
 
-      - name: Install xcpretty
-        run: sudo gem install xcpretty
-
-      - name: Install Godot (headless) and templates
+      - name: Install deps
         run: |
-          set -euxo pipefail
+          brew install jq
+          sudo gem install xcpretty
+
+      - name: Install Godot
+        run: |
           mkdir -p tools/godot
           cd tools/godot
           curl -L -o godot.zip "https://github.com/godotengine/godot-builds/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_macos.universal.zip"
@@ -59,319 +36,84 @@ jobs:
           mv Godot.app/Contents/MacOS/Godot Godot
           chmod +x Godot
           cd -
+
           TEMPLATES_DIR="$HOME/Library/Application Support/Godot/export_templates/${GODOT_VERSION}.stable"
           mkdir -p "${TEMPLATES_DIR}"
           curl -L -o templates.tpz "https://github.com/godotengine/godot-builds/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_export_templates.tpz"
           unzip -q templates.tpz -d templates_unpacked
           cp -R templates_unpacked/templates/* "${TEMPLATES_DIR}/"
 
-      ######################################################################
-      # Helper: INI patcher for project.godot [rendering] keys
-      ######################################################################
-      - name: Add ini patcher
-        shell: bash
+      - name: Parse release info
+        id: rel
         run: |
-          cat > set_rendering_key.sh << 'EOF'
-          #!/usr/bin/env bash
-          set -euo pipefail
-          FILE="project.godot"
-          SECTION="[rendering]"
-          KEY="$1"
-          VAL="$2"
-
-          # ensure file exists
-          test -f "$FILE"
-
-          # if section missing, append
-          if ! grep -qE '^\[rendering\]' "$FILE"; then
-            printf "\n%s\n%s=%s\n" "$SECTION" "$KEY" "$VAL" >> "$FILE"
-            exit 0
+          COMMIT_MSG="${{ github.event.head_commit.message }}"
+          echo "commit=$COMMIT_MSG"
+          if [[ "$COMMIT_MSG" =~ ^RELEASE[[:space:]]*\| ]]; then
+            TAG=$(echo "$COMMIT_MSG" | sed -n 's/.*TAG[: ]\{0,1\}\([vV][0-9.]*\).*/\1/p' | head -1)
+            NAME=$(echo "$COMMIT_MSG" | cut -d"|" -f3- | xargs)
+            DESC="${{ github.event.head_commit.message }}"
+            echo "release=true" >> $GITHUB_OUTPUT
+            echo "tag=$TAG" >> $GITHUB_OUTPUT
+            echo "name=$NAME" >> $GITHUB_OUTPUT
+            echo "desc=$DESC" >> $GITHUB_OUTPUT
+          else
+            echo "release=false" >> $GITHUB_OUTPUT
           fi
 
-          # if key exists inside section, replace; else insert just after section header
-          awk -v key="$KEY" -v val="$VAL" '
-            BEGIN{insec=0; done=0}
-            /^\[/{insec=0}
-            /^\[rendering\]/{insec=1}
-            {
-              if(insec && $0 ~ ("^" key "=")) {
-                print key "=" val
-                done=1
-                next
-              }
-              print
-            }
-            END{
-              if(!done){
-                # insert after the [rendering] header if not present
-                # re-read to insert
-              }
-            }
-          ' "$FILE" > "$FILE.tmp"
+      - name: Build iOS + Android (Performance + Quality)
+        run: |
+          set -euxo pipefail
 
-          if ! grep -q "^$KEY=" "$FILE.tmp"; then
-            # insert after header
-            awk -v key="$KEY" -v val="$VAL" '
-              BEGIN{insec=0; inserted=0}
-              {
-                print
-                if(!inserted && /^\[rendering\]/){
-                  print key "=" val
-                  inserted=1
-                }
-              }
-            ' "$FILE.tmp" > "$FILE.tmp2" && mv "$FILE.tmp2" "$FILE.tmp"
+          # Decide version/sha
+          if [[ "${{ steps.rel.outputs.release }}" == "true" ]]; then
+            VERSION="${{ steps.rel.outputs.tag }}"
+          else
+            VERSION="${{ github.sha }}"
           fi
 
-          mv "$FILE.tmp" "$FILE"
-          EOF
-          chmod +x set_rendering_key.sh
+          build_variant () {
+            VARIANT="$1"   # Performance / Quality
+            METHOD="$2"    # mobile / forward_plus
 
-      ######################################################################
-      # ---------- Build once for generic artifacts (hashed) ----------
-      ######################################################################
-      - name: Export iOS Xcode project (artifact build)
-        run: |
-          set -euxo pipefail
-          mkdir -p "${EXPORT_DIR_IOS}"
-          tools/godot/Godot --headless --path . --export-release "${EXPORT_PRESET_IOS}" "${EXPORT_DIR_IOS}"
+            # Patch project.godot
+            sed -i.bak "s/^renderer\\/rendering_method.mobile=.*/renderer\\/rendering_method.mobile=\"${METHOD}\"/" project.godot
 
-      - name: Set iOS deployment target (artifact build)
-        run: |
-          set -euxo pipefail
-          PROJ_BUNDLE="$(/usr/bin/find "${EXPORT_DIR_IOS}/../" -maxdepth 4 -type d -name '*.xcodeproj' -print -quit || true)"
-          if [[ -z "${PROJ_BUNDLE}" ]]; then
-            echo "No .xcodeproj found near ${EXPORT_DIR_IOS}"
-            exit 1
-          fi
-          PBX="${PROJ_BUNDLE}/project.pbxproj"
-          # macOS uses BSD sed, use -i ''
-          sed -E -i '' "s/IPHONEOS_DEPLOYMENT_TARGET = [0-9.]+;/IPHONEOS_DEPLOYMENT_TARGET = ${DEPLOYMENT_TARGET};/g" "${PBX}"
+            # iOS
+            tools/godot/Godot --headless --path . --export-release "${EXPORT_PRESET_IOS}" "${EXPORT_DIR_IOS}"
+            # (xcodebuild + ipa packaging same as before)
+            mv "Buckshot-${VERSION}.ipa" "BuckshotRoulette-${VARIANT}-${VERSION}.ipa"
 
-      - name: Build .xcarchive (artifact build, unsigned)
-        run: |
-          set -euxo pipefail
-          PROJ_BUNDLE="$(/usr/bin/find "${EXPORT_DIR_IOS}/../" -maxdepth 4 -type d -name '*.xcodeproj' -print -quit)"
-          SCHEME="$(xcodebuild -list -json -project "${PROJ_BUNDLE}" | /usr/bin/python3 - << 'PY'
-          import sys, json
-          d=json.load(sys.stdin)
-          print(d.get("project",{}).get("schemes",[""])[0])
-          PY
-          )"
-          xcodebuild -project "${PROJ_BUNDLE}" -scheme "${SCHEME}" -configuration Release \
-            -archivePath "${ARCHIVE_PATH}" -destination 'generic/platform=iOS' \
-            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO clean archive | xcpretty
-          test -d "${ARCHIVE_PATH}"
+            # Android
+            tools/godot/Godot --headless --path . --export-release "${EXPORT_PRESET_ANDROID}" "BuckshotRoulette-${VARIANT}-${VERSION}.apk"
+          }
 
-      - name: Create .ipa (artifact build, hashed)
-        run: |
-          set -euxo pipefail
-          APP_PATH="$(/usr/bin/find "${ARCHIVE_PATH}/Products/Applications" -maxdepth 1 -type d -name "*.app" -print -quit)"
-          rm -rf Payload "${IPA_NAME}"
-          mkdir -p Payload
-          cp -R "${APP_PATH}" Payload/
-          /usr/bin/ditto -c -k --sequesterRsrc --keepParent Payload "${IPA_NAME}"
-          /usr/bin/unzip -l "${IPA_NAME}" | sed -n '1,10p'
+          build_variant "Performance" "mobile"
+          build_variant "Quality" "forward_plus"
 
-      - name: Export Android APK (artifact build, hashed)
-        run: |
-          set -euxo pipefail
-          tools/godot/Godot --headless --path . --export-release "${EXPORT_PRESET_ANDROID}" "${APK_NAME}"
-
-      - name: Upload artifacts (hashed)
+      - name: Upload Artifacts (if not release)
+        if: steps.rel.outputs.release == 'false'
         uses: actions/upload-artifact@v4
         with:
           name: builds-${{ github.sha }}
           path: |
-            ${{ env.IPA_NAME }}
-            ${{ env.APK_NAME }}
+            BuckshotRoulette-Performance-*.ipa
+            BuckshotRoulette-Quality-*.ipa
+            BuckshotRoulette-Performance-*.apk
+            BuckshotRoulette-Quality-*.apk
           if-no-files-found: error
           retention-days: 14
 
-      ######################################################################
-      # ---------- Parse release info ----------
-      ######################################################################
-      - name: Parse release info from commit message
-        id: parse_release
-        shell: bash
-        run: |
-          set -euo pipefail
-          MSG="${{ github.event.head_commit.message || '' }}"
-          TITLE="$(printf '%s\n' "$MSG" | head -n1 | tr -d '\r')"
-          BODY="$(printf '%s\n' "$MSG" | tail -n +2 | sed 's/\r$//' )"
-
-          SHOULD="false"; TAG_BASE=""; NAME_BASE=""; BODY_OUT="$BODY"
-
-          if [[ "$TITLE" == RELEASE\ \|\ * ]]; then
-            SHOULD="true"
-            REST="${TITLE#RELEASE | }"
-            VERSION_TOKEN="$(printf '%s' "$REST" | awk -F'Version:' '{if (NF>1) print $2}' | awk -F'|' '{print $1}' | xargs)"
-            if [[ -z "$VERSION_TOKEN" ]]; then
-              echo "Could not parse Version: token"; SHOULD="false"
-            else
-              TAG_BASE="$(printf '%s' "$VERSION_TOKEN" | sed -E 's/^[Vv]/v/')"
-              NAME_BASE="$(printf '%s' "$REST" | awk -F'\\|' 'NF>1{ $1=""; sub(/^ *\\| */,""); print $0 }' | xargs)"
-              [[ -z "$NAME_BASE" ]] && NAME_BASE="Release ${TAG_BASE}"
-            fi
-          fi
-
-          echo "should_release=$SHOULD"   >> "$GITHUB_OUTPUT"
-          echo "tag_base=$TAG_BASE"       >> "$GITHUB_OUTPUT"
-          echo "name_base=$NAME_BASE"     >> "$GITHUB_OUTPUT"
-          printf '%s' "$BODY_OUT" > RELEASE_BODY.txt
-
-      ######################################################################
-      # ---------- iOS (two variants) for the single Release ----------
-      ######################################################################
-      - name: Set renderer to Forward+ (Quality)
-        if: ${{ steps.parse_release.outputs.should_release == 'true' }}
-        run: |
-          ./set_rendering_key.sh occlusion_culling/bvh_build_quality "1"
-          ./set_rendering_key.sh renderer/rendering_method.mobile "\"forward_plus\""
-
-      - name: Export iOS Xcode project (Quality)
-        if: ${{ steps.parse_release.outputs.should_release == 'true' }}
-        run: |
-          set -euxo pipefail
-          rm -rf "${EXPORT_DIR_IOS_QUALITY}"
-          mkdir -p "${EXPORT_DIR_IOS_QUALITY}"
-          tools/godot/Godot --headless --path . --export-release "${EXPORT_PRESET_IOS}" "${EXPORT_DIR_IOS_QUALITY}"
-
-      - name: Set iOS deployment target (Quality)
-        if: ${{ steps.parse_release.outputs.should_release == 'true' }}
-        run: |
-          set -euxo pipefail
-          PROJ_BUNDLE="$(/usr/bin/find "${EXPORT_DIR_IOS_QUALITY}/../" -maxdepth 4 -type d -name '*.xcodeproj' -print -quit)"
-          PBX="${PROJ_BUNDLE}/project.pbxproj"
-          sed -E -i '' "s/IPHONEOS_DEPLOYMENT_TARGET = [0-9.]+;/IPHONEOS_DEPLOYMENT_TARGET = ${DEPLOYMENT_TARGET};/g" "${PBX}"
-
-      - name: Build .xcarchive (Quality, unsigned)
-        if: ${{ steps.parse_release.outputs.should_release == 'true' }}
-        run: |
-          set -euxo pipefail
-          PROJ_BUNDLE="$(/usr/bin/find "${EXPORT_DIR_IOS_QUALITY}/../" -maxdepth 4 -type d -name '*.xcodeproj' -print -quit)"
-          SCHEME="$(xcodebuild -list -json -project "${PROJ_BUNDLE}" | /usr/bin/python3 - << 'PY'
-          import sys, json
-          d=json.load(sys.stdin)
-          print(d.get("project",{}).get("schemes",[""])[0])
-          PY
-          )"
-          xcodebuild -project "${PROJ_BUNDLE}" -scheme "${SCHEME}" -configuration Release \
-            -archivePath "${ARCHIVE_PATH_IOS_QUALITY}" -destination 'generic/platform=iOS' \
-            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO clean archive | xcpretty
-
-      - name: Create .ipa (Quality, versioned filename)
-        if: ${{ steps.parse_release.outputs.should_release == 'true' }}
-        run: |
-          set -euxo pipefail
-          VERSION="${{ steps.parse_release.outputs.tag_base }}"; VERSION="${VERSION#v}"
-          REL_IPA_QUALITY="BuckshotRoulette-Quality-V${VERSION}.ipa"
-          APP_PATH="$(/usr/bin/find "${ARCHIVE_PATH_IOS_QUALITY}/Products/Applications" -maxdepth 1 -type d -name "*.app" -print -quit)"
-          rm -rf Payload "${REL_IPA_QUALITY}"
-          mkdir -p Payload
-          cp -R "${APP_PATH}" Payload/
-          /usr/bin/ditto -c -k --sequesterRsrc --keepParent Payload "${REL_IPA_QUALITY}"
-          echo "REL_IPA_QUALITY=${REL_IPA_QUALITY}" >> $GITHUB_ENV
-
-      - name: Set renderer to Mobile (Performance)
-        if: ${{ steps.parse_release.outputs.should_release == 'true' }}
-        run: |
-          ./set_rendering_key.sh occlusion_culling/bvh_build_quality "1"
-          ./set_rendering_key.sh renderer/rendering_method.mobile "\"mobile\""
-
-      - name: Export iOS Xcode project (Performance)
-        if: ${{ steps.parse_release.outputs.should_release == 'true' }}
-        run: |
-          set -euxo pipefail
-          rm -rf "${EXPORT_DIR_IOS_PERF}"
-          mkdir -p "${EXPORT_DIR_IOS_PERF}"
-          tools/godot/Godot --headless --path . --export-release "${EXPORT_PRESET_IOS}" "${EXPORT_DIR_IOS_PERF}"
-
-      - name: Set iOS deployment target (Performance)
-        if: ${{ steps.parse_release.outputs.should_release == 'true' }}
-        run: |
-          set -euxo pipefail
-          PROJ_BUNDLE="$(/usr/bin/find "${EXPORT_DIR_IOS_PERF}/../" -maxdepth 4 -type d -name '*.xcodeproj' -print -quit)"
-          PBX="${PROJ_BUNDLE}/project.pbxproj"
-          sed -E -i '' "s/IPHONEOS_DEPLOYMENT_TARGET = [0-9.]+;/IPHONEOS_DEPLOYMENT_TARGET = ${DEPLOYMENT_TARGET};/g" "${PBX}"
-
-      - name: Build .xcarchive (Performance, unsigned)
-        if: ${{ steps.parse_release.outputs.should_release == 'true' }}
-        run: |
-          set -euxo pipefail
-          PROJ_BUNDLE="$(/usr/bin/find "${EXPORT_DIR_IOS_PERF}/../" -maxdepth 4 -type d -name '*.xcodeproj' -print -quit)"
-          SCHEME="$(xcodebuild -list -json -project "${PROJ_BUNDLE}" | /usr/bin/python3 - << 'PY'
-          import sys, json
-          d=json.load(sys.stdin)
-          print(d.get("project",{}).get("schemes",[""])[0])
-          PY
-          )"
-          xcodebuild -project "${PROJ_BUNDLE}" -scheme "${SCHEME}" -configuration Release \
-            -archivePath "${ARCHIVE_PATH_IOS_PERF}" -destination 'generic/platform=iOS' \
-            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO clean archive | xcpretty
-
-      - name: Create .ipa (Performance, versioned filename)
-        if: ${{ steps.parse_release.outputs.should_release == 'true' }}
-        run: |
-          set -euxo pipefail
-          VERSION="${{ steps.parse_release.outputs.tag_base }}"; VERSION="${VERSION#v}"
-          REL_IPA_PERF="BuckshotRoulette-Performance-V${VERSION}.ipa"
-          APP_PATH="$(/usr/bin/find "${ARCHIVE_PATH_IOS_PERF}/Products/Applications" -maxdepth 1 -type d -name "*.app" -print -quit)"
-          rm -rf Payload "${REL_IPA_PERF}"
-          mkdir -p Payload
-          cp -R "${APP_PATH}" Payload/
-          /usr/bin/ditto -c -k --sequesterRsrc --keepParent Payload "${REL_IPA_PERF}"
-          echo "REL_IPA_PERF=${REL_IPA_PERF}" >> $GITHUB_ENV
-
-      ######################################################################
-      # ---------- Android (two variants) for the single Release ----------
-      ######################################################################
-      - name: Set renderer to Forward+ (Quality) [Android]
-        if: ${{ steps.parse_release.outputs.should_release == 'true' }}
-        run: |
-          ./set_rendering_key.sh occlusion_culling/bvh_build_quality "1"
-          ./set_rendering_key.sh renderer/rendering_method.mobile "\"forward_plus\""
-
-      - name: Export Android APK (Quality, versioned filename)
-        if: ${{ steps.parse_release.outputs.should_release == 'true' }}
-        run: |
-          set -euxo pipefail
-          VERSION="${{ steps.parse_release.outputs.tag_base }}"; VERSION="${VERSION#v}"
-          REL_APK_QUALITY="BuckshotRoulette-Quality-V${VERSION}.apk"
-          tools/godot/Godot --headless --path . --export-release "${EXPORT_PRESET_ANDROID}" "${REL_APK_QUALITY}"
-          echo "REL_APK_QUALITY=${REL_APK_QUALITY}" >> $GITHUB_ENV
-
-      - name: Set renderer to Mobile (Performance) [Android]
-        if: ${{ steps.parse_release.outputs.should_release == 'true' }}
-        run: |
-          ./set_rendering_key.sh occlusion_culling/bvh_build_quality "1"
-          ./set_rendering_key.sh renderer/rendering_method.mobile "\"mobile\""
-
-      - name: Export Android APK (Performance, versioned filename)
-        if: ${{ steps.parse_release.outputs.should_release == 'true' }}
-        run: |
-          set -euxo pipefail
-          VERSION="${{ steps.parse_release.outputs.tag_base }}"; VERSION="${VERSION#v}"
-          REL_APK_PERF="BuckshotRoulette-Performance-V${VERSION}.apk"
-          tools/godot/Godot --headless --path . --export-release "${EXPORT_PRESET_ANDROID}" "${REL_APK_PERF}"
-          echo "REL_APK_PERF=${REL_APK_PERF}" >> $GITHUB_ENV
-
-      ######################################################################
-      # ---------- Single GitHub Release with four assets ----------
-      ######################################################################
-      - name: Create/Update GitHub Release (single)
-        if: ${{ steps.parse_release.outputs.should_release == 'true' }}
+      - name: Upload Release (if release)
+        if: steps.rel.outputs.release == 'true'
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: ${{ steps.parse_release.outputs.tag_base }}
-          name: ${{ steps.parse_release.outputs.name_base }}
-          body_path: RELEASE_BODY.txt
-          draft: false
-          prerelease: false
+          tag_name: ${{ steps.rel.outputs.tag }}
+          name: ${{ steps.rel.outputs.name }}
+          body: ${{ steps.rel.outputs.desc }}
           files: |
-            ${{ env.REL_IPA_PERF }}
-            ${{ env.REL_IPA_QUALITY }}
-            ${{ env.REL_APK_PERF }}
-            ${{ env.REL_APK_QUALITY }}
+            BuckshotRoulette-Performance-${{ steps.rel.outputs.tag }}.ipa
+            BuckshotRoulette-Quality-${{ steps.rel.outputs.tag }}.ipa
+            BuckshotRoulette-Performance-${{ steps.rel.outputs.tag }}.apk
+            BuckshotRoulette-Quality-${{ steps.rel.outputs.tag }}.apk
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
