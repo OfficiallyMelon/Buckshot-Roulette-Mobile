@@ -5,6 +5,10 @@ on:
     branches: ["**"]
   workflow_dispatch:
 
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: macos-13
@@ -15,20 +19,23 @@ jobs:
       EXPORT_DIR_IOS: "build/ios"
       EXPORT_DIR_ANDROID: "build/android"
       ARCHIVE_PATH: "build/App.xcarchive"
+      IPA_NAME: "Buckshot-${{ github.sha }}.ipa"
+      APK_NAME: "Buckshot-${{ github.sha }}.apk"
       DEPLOYMENT_TARGET: "12.0"
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout (with LFS)
+        uses: actions/checkout@v4
         with:
           lfs: true
 
-      - name: Install deps
+      - name: Install xcpretty
         run: |
-          brew install jq
           sudo gem install xcpretty
 
-      - name: Install Godot
+      - name: Install Godot (headless) and templates
         run: |
+          set -euxo pipefail
           mkdir -p tools/godot
           cd tools/godot
           curl -L -o godot.zip "https://github.com/godotengine/godot-builds/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_macos.universal.zip"
@@ -36,94 +43,116 @@ jobs:
           mv Godot.app/Contents/MacOS/Godot Godot
           chmod +x Godot
           cd -
-
           TEMPLATES_DIR="$HOME/Library/Application Support/Godot/export_templates/${GODOT_VERSION}.stable"
           mkdir -p "${TEMPLATES_DIR}"
           curl -L -o templates.tpz "https://github.com/godotengine/godot-builds/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_export_templates.tpz"
           unzip -q templates.tpz -d templates_unpacked
           cp -R templates_unpacked/templates/* "${TEMPLATES_DIR}/"
 
-      - name: Parse release info
-        id: rel
+      - name: Export iOS Xcode project (project only)
         run: |
-          COMMIT_MSG="${{ github.event.head_commit.message }}"
-          echo "commit=$COMMIT_MSG"
+          set -euxo pipefail
+          mkdir -p "${EXPORT_DIR_IOS}"
+          tools/godot/Godot --headless --path . --export-release "${EXPORT_PRESET_IOS}" "${EXPORT_DIR_IOS}"
 
-          if [[ "$COMMIT_MSG" =~ ^RELEASE[[:space:]]*\| ]]; then
-            TAG=$(echo "$COMMIT_MSG" | sed -n 's/.*TAG[: ]\{0,1\}\([vV][0-9.]*\).*/\1/p' | head -1)
-            NAME=$(echo "$COMMIT_MSG" | cut -d"|" -f3- | xargs)
-
-            # Use the full commit message (with body) as release description
-            DESC="${COMMIT_MSG}"
-
-            echo "release=true" >> $GITHUB_OUTPUT
-            echo "tag=${TAG}" >> $GITHUB_OUTPUT
-            echo "name=${NAME}" >> $GITHUB_OUTPUT
-
-            {
-              echo "desc<<EOF"
-              echo "$DESC"
-              echo "EOF"
-            } >> $GITHUB_OUTPUT
-          else
-            echo "release=false" >> $GITHUB_OUTPUT
+      - name: Set iOS deployment target
+        run: |
+          set -euxo pipefail
+          PROJ_BUNDLE="$(/usr/bin/find "${EXPORT_DIR_IOS}/../" -maxdepth 4 -type d -name '*.xcodeproj' -print -quit || true)"
+          if [[ -z "${PROJ_BUNDLE}" ]]; then
+            echo "No .xcodeproj found near ${EXPORT_DIR_IOS}"
+            echo "Tree under ${EXPORT_DIR_IOS}:"
+            find "${EXPORT_DIR_IOS}" -maxdepth 4 -print || true
+            echo "Dumping iOS export preset from export_presets.cfg for debugging:"
+            awk '
+              BEGIN{p=0}
+              /^\[preset\.[0-9]+\]/{p=0}
+              /\[preset\.[0-9]+\]/{blk=$0}
+              /platform="iOS"/{p=1; print blk}
+              p && /\[preset\.[0-9]+\.options\]/{print; next}
+              p && /^[^[]/{print}
+            ' export_presets.cfg || true
+            exit 1
           fi
+          echo "Using Xcode project: ${PROJ_BUNDLE}"
+          PBX="${PROJ_BUNDLE}/project.pbxproj"
+          perl -0777 -pe "s/IPHONEOS_DEPLOYMENT_TARGET = [0-9.]+;/IPHONEOS_DEPLOYMENT_TARGET = ${DEPLOYMENT_TARGET};/g" -i "${PBX}"
 
+      - name: Build .xcarchive (unsigned)
+        run: |
+          set -euxo pipefail
+          PROJ_BUNDLE="$(/usr/bin/find "${EXPORT_DIR_IOS}/../" -maxdepth 4 -type d -name '*.xcodeproj' -print -quit || true)"
+          if [[ -z "${PROJ_BUNDLE}" ]]; then
+            echo "No .xcodeproj found for build step."
+            exit 1
+          fi
+          echo "Using Xcode project: ${PROJ_BUNDLE}"
 
-      - name: Build iOS + Android (Performance + Quality)
+          SCHEME="$(xcodebuild -list -json -project "${PROJ_BUNDLE}" \
+            | /usr/bin/python3 -c 'import sys,json; d=json.load(sys.stdin); p=d.get("project",{}); s=p.get("schemes",[]); print(s[0] if s else "")')"
+
+          if [[ -z "${SCHEME}" ]]; then
+            echo "No schemes found in ${PROJ_BUNDLE}"
+            xcodebuild -list -project "${PROJ_BUNDLE}" || true
+            exit 1
+          fi
+          echo "Using scheme: ${SCHEME}"
+
+          xcodebuild \
+            -project "${PROJ_BUNDLE}" \
+            -scheme "${SCHEME}" \
+            -configuration Release \
+            -archivePath "${ARCHIVE_PATH}" \
+            -destination 'generic/platform=iOS' \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO \
+            clean archive | xcpretty
+
+          test -d "${ARCHIVE_PATH}"
+
+      - name: Create .ipa (unsigned)
         run: |
           set -euxo pipefail
 
-          # Decide version/sha
-          if [[ "${{ steps.rel.outputs.release }}" == "true" ]]; then
-            VERSION="${{ steps.rel.outputs.tag }}"
-          else
-            VERSION="${{ github.sha }}"
+          APP_DIR="${ARCHIVE_PATH}/Products/Applications"
+          if [[ ! -d "${APP_DIR}" ]]; then
+            echo "Archive missing Applications dir: ${APP_DIR}"
+            find "${ARCHIVE_PATH}" -maxdepth 4 -print
+            exit 1
           fi
 
-          build_variant () {
-            VARIANT="$1"   # Performance / Quality
-            METHOD="$2"    # mobile / forward_plus
+          APP_PATH="$(/usr/bin/find "${APP_DIR}" -maxdepth 1 -type d -name "*.app" -print -quit || true)"
+          if [[ -z "${APP_PATH}" ]]; then
+            echo "No .app found in ${APP_DIR}"
+            ls -al "${APP_DIR}" || true
+            exit 1
+          fi
+          echo "Packaging app: ${APP_PATH}"
 
-            # Patch project.godot
-            sed -i.bak "s/^renderer\\/rendering_method.mobile=.*/renderer\\/rendering_method.mobile=\"${METHOD}\"/" project.godot
+          rm -rf Payload "${IPA_NAME}"
+          mkdir -p Payload
+          cp -R "${APP_PATH}" Payload/
 
-            # iOS
-            tools/godot/Godot --headless --path . --export-release "${EXPORT_PRESET_IOS}" "${EXPORT_DIR_IOS}"
-            # (xcodebuild + ipa packaging same as before)
-            mv "Buckshot-${VERSION}.ipa" "BuckshotRoulette-${VARIANT}-${VERSION}.ipa"
+          # --- Option A (recommended): keeps Payload as the top-level folder
+          /usr/bin/ditto -c -k --sequesterRsrc --keepParent Payload "${IPA_NAME}"
 
-            # Android
-            tools/godot/Godot --headless --path . --export-release "${EXPORT_PRESET_ANDROID}" "BuckshotRoulette-${VARIANT}-${VERSION}.apk"
-          }
+          # --- Option B (zip): also keeps Payload at the top level
+          # /usr/bin/zip -qry "${IPA_NAME}" Payload
 
-          build_variant "Performance" "mobile"
-          build_variant "Quality" "forward_plus"
+          # Sanity check: list IPA contents to confirm Payload/YourApp.app structure
+          /usr/bin/unzip -l "${IPA_NAME}" | sed -n '1,10p'
 
-      - name: Upload Artifacts (if not release)
-        if: steps.rel.outputs.release == 'false'
+      - name: Export Android APK
+        run: |
+          set -euxo pipefail
+          mkdir -p "${EXPORT_DIR_ANDROID}"
+          tools/godot/Godot --headless --path . --export-release "${EXPORT_PRESET_ANDROID}" "${APK_NAME}"
+
+      - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
           name: builds-${{ github.sha }}
           path: |
-            BuckshotRoulette-Performance-*.ipa
-            BuckshotRoulette-Quality-*.ipa
-            BuckshotRoulette-Performance-*.apk
-            BuckshotRoulette-Quality-*.apk
+            ${{ env.IPA_NAME }}
+            ${{ env.APK_NAME }}
           if-no-files-found: error
           retention-days: 14
-
-      - name: Upload Release
-        if: steps.rel.outputs.release == 'true'
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: ${{ steps.rel.outputs.tag }}
-          name: ${{ steps.rel.outputs.name }}
-          body: ${{ steps.rel.outputs.desc }}
-          files: |
-            BuckshotRoulette-Performance-${{ steps.rel.outputs.tag }}.ipa
-            BuckshotRoulette-Quality-${{ steps.rel.outputs.tag }}.ipa
-            BuckshotRoulette-Performance-${{ steps.rel.outputs.tag }}.apk
-            BuckshotRoulette-Quality-${{ steps.rel.outputs.tag }}.apk
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
