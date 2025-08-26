@@ -33,8 +33,9 @@ func SetupHealth():
 		if (setting):
 			ui_playername.text = roundManager.playerData.playername.to_upper()
 			var playername_upper = roundManager.playerData.playername.to_upper()
-			ui_playerwin.text = tr("PLAYERWIN") % [playername_upper] 
-			#ui_playerwin.text = roundManager.playerData.playername.to_upper() + " " + tr("PLAYERWIN")
+			print([playername_upper])
+			#ui_playerwin.text = tr("PLAYERWIN") % [playername_upper] 
+			ui_playerwin.text = roundManager.playerData.playername.to_upper() + " " + tr("PLAYERWIN")
 			setting = false
 		roundManager.health_player = roundManager.roundArray[roundManager.currentRound].startingHealth
 		roundManager.health_opponent = roundManager.roundArray[roundManager.currentRound].startingHealth

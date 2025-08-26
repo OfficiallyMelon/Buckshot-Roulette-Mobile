@@ -121,7 +121,7 @@ func RevivalBathroomStart():
 	animator_smokerdude.play("revive player")
 	dia.ShowText_Forever(tr("YOURE LUCKY"))
 	var n = roundManager.playerData.playername
-	var firstpart = tr("GET UP") % [n]
+	var firstpart = n + " " + tr("GET UP")
 	#tr("GAME_STATUS_%d" % status_index)
 	var secondpart = "\n"+tr("THE NIGHT")
 	var full = firstpart + secondpart
